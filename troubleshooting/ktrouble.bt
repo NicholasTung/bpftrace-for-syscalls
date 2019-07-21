@@ -1,0 +1,15 @@
+#!/usr/bin/env bpftrace
+
+BEGIN
+{
+	printf("Tracing syscalls for something. Ctrl-C to stop.\n");
+	printf("%-9s %-6s %-9s %-15s %s\n", "TIME", "PID", "COMM", "EVENT", "ARG1");
+}
+
+kprobe:set_brk,
+kprobe:do_brk_flags
+/comm == "readmeme"/
+{
+	time("%H:%M:%S  ");
+	printf("%-6d %-9s %-15s %s\n", pid, comm, probe, str(arg1));
+}

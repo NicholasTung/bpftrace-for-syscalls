@@ -1,0 +1,18 @@
+#!/usr/bin/env bpftrace
+
+BEGIN
+{
+	printf("Tracing syscalls for something. Ctrl-C to stop.\n");
+	printf("%-9s %-6s %s\n", "TIME", "PID", "EVENT");
+}
+
+tracepoint:raw_syscalls:sys_enter /comm == "readmeme"/
+{
+	time("%H:%M:%S  ");
+	printf("%-6d %-9s id:%-5d\n", pid, comm, args->id); 
+	printf("a0:%p a1:%p a2:%p a3:%p a4:%p\n", args->args[0], 
+							   args->args[1],
+							   args->args[2],
+							   args->args[3],
+							   args->args[4]);
+}

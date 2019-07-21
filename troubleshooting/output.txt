@@ -1,0 +1,48 @@
+Attaching 331 probes...
+Tracing syscalls for something. Ctrl-C to stop.
+TIME      PID    COMM      EVENT           ARG1
+17:14:32  2759   readmeme  kprobe:__x64_sys_brk 
+17:14:32  2759   readmeme  kprobe:__x64_sys_arch_prctl 
+17:14:32  2759   readmeme  kprobe:__x64_sys_access 
+17:14:32  2759   readmeme  kprobe:__x64_sys_openat 
+17:14:32  2759   readmeme  kprobe:__x64_sys_newfstat 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_close 
+17:14:32  2759   readmeme  kprobe:__x64_sys_openat 
+17:14:32  2759   readmeme  kprobe:__x64_sys_read 
+17:14:32  2759   readmeme  kprobe:__x64_sys_lseek 
+17:14:32  2759   readmeme  kprobe:__x64_sys_read 
+17:14:32  2759   readmeme  kprobe:__x64_sys_newfstat 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_lseek 
+17:14:32  2759   readmeme  kprobe:__x64_sys_read 
+17:14:32  2759   readmeme  kprobe:__x64_sys_lseek 
+17:14:32  2759   readmeme  kprobe:__x64_sys_read 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mprotect 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_close 
+17:14:32  2759   readmeme  kprobe:__x64_sys_arch_prctl 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mprotect 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mprotect 
+17:14:32  2759   readmeme  kprobe:__x64_sys_mprotect 
+17:14:32  2759   readmeme  kprobe:__x64_sys_munmap 
+17:14:32  2759   readmeme  kprobe:__x64_sys_newfstat 
+17:14:32  2759   readmeme  kprobe:__x64_sys_brk 
+17:14:32  2759   readmeme  kprobe:__x64_sys_brk 
+17:14:32  2759   readmeme  kprobe:__x64_sys_write 
+17:14:32  2759   readmeme  kprobe:__x64_sys_newfstat 
+17:14:32  2759   readmeme  kprobe:__x64_sys_read 
+17:14:35  2759   readmeme  kprobe:__x64_sys_openat 
+17:14:35  2759   readmeme  kprobe:__x64_sys_write 
+17:14:35  2759   readmeme  kprobe:__x64_sys_newfstat 
+17:14:35  2759   readmeme  kprobe:__x64_sys_read 
+17:14:35  2759   readmeme  kprobe:__x64_sys_read 
+17:14:35  2759   readmeme  kprobe:__x64_sys_close 
+17:14:35  2759   readmeme  kprobe:__x64_sys_write 
+17:14:35  2759   readmeme  kprobe:__x64_sys_exit_group 
+
+
