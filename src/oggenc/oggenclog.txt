@@ -1,0 +1,1349 @@
+Attaching 294 probes...
+Tracing syscalls for oggenc. Ctrl-C to stop.
+TIME      PID    EVENT 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_arch_prctl 
+arg1:12289 arg2:1063058560 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_access 
+arg1:0x7f1c01c385b0 arg2:4 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01c35a61 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5cee60 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:232092 arg3:1 arg4:2 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01c3fc70 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cf028 arg3:832 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5ceec0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:8192 arg3:3 arg4:34 arg5:-1 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:2785360 arg3:5 arg4:2050 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:26984448 arg2:2093056 arg3:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:29077504 arg2:118784 arg3:3 arg4:2066 arg5:3 arg6:573440 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01bd84d0 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cf008 arg3:832 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5ceea0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:2273296 arg3:5 arg4:2050 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:24301568 arg2:2097152 arg3:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:26398720 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:172032 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01bd89c0 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cefe8 arg3:832 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5cee80 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:426016 arg3:1 arg4:2050 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:23736320 arg2:344064 arg3:5 arg4:2066 arg5:3 arg6:36864 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:24080384 arg2:36864 arg3:1 arg4:2066 arg5:3 arg6:380928 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:24117248 arg2:12288 arg3:3 arg4:2066 arg5:3 arg6:413696 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01bd8eb0 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cefc8 arg3:832 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5cee60 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:1331224 arg3:1 arg4:2050 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:22417408 arg2:638976 arg3:5 arg4:2066 arg5:3 arg6:53248 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:23056384 arg2:634880 arg3:1 arg4:2066 arg5:3 arg6:692224 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:23691264 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:1323008 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01bd93a0 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cefa8 arg3:832 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5cee40 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:2121744 arg3:5 arg4:2050 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:20258816 arg2:2097152 arg3:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:22355968 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:20480 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01bd9890 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cef88 arg3:832 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_lseek 
+arg1:3 arg2:0x318 arg3:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cee40 arg3:68 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5cee20 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_lseek 
+arg1:3 arg2:0x318 arg3:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5cea90 arg3:68 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_lseek 
+arg1:3 arg2:0x360 arg3:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5ceab0 arg3:32 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:1852992 arg3:1 arg4:2050 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:18522112 arg2:1675264 arg3:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:18522112 arg2:1359872 arg3:5 arg4:2066 arg5:3 arg6:139264 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:19881984 arg2:311296 arg3:1 arg4:2066 arg5:3 arg6:1499136 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:20197376 arg2:24576 arg3:3 arg4:2066 arg5:3 arg6:1810432 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:20221952 arg2:13888 arg3:3 arg4:50 arg5:-1 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:8192 arg3:3 arg4:34 arg5:-1 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_arch_prctl 
+arg1:4098 arg2:18379840 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:20197376 arg2:16384 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:22355968 arg2:4096 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:23691264 arg2:4096 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:24117248 arg2:8192 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:26398720 arg2:4096 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:29077504 arg2:114688 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-151986176 arg2:4096 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:29609984 arg2:4096 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_munmap 
+arg1:29204480 arg2:232092 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124780544 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f1c01314a80 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7f1c01348900 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:3346512 arg3:1 arg4:2 arg5:3 arg6:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_getpid 
+ 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7ffc3f5d13dc arg3:0 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7ffc3f5cf7b0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7ffc3f5cf4f0 arg3:524288 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:4 arg2:0x7ffc3f5cf340 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:4 arg2:0x5614f88e1940 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:4 arg2:0x5614f88e1940 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:4 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x5614f88e19b0 arg3:0 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x5614f88e1c10 arg3:0 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x5614f88e1a50 arg3:0 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x5614f88e1b50 arg3:0 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x5614f88e1bd0 arg3:0 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x5614f88e1ad0 arg3:0 arg4:0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5cd2d0 arg3:41 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x5614f88e1dd0 arg3:577 arg4:438 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5cca30 arg3:107 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124645376 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124510208 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124375040 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:4 arg2:0x7ffc3f5cefb0 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124231680 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124239872 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f1c01348563 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5ccab0 arg3:31 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f1c01348563 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5ccab0 arg3:31 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f1c01348563 arg3:1 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5ccab0 arg3:31 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x5614f88e0650 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7ffc3f5ce0f0 arg3:4096 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124362752 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5cca50 arg3:55 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5cca50 arg3:25 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5cca50 arg3:24 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5cca50 arg3:23 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7ffc3f5ccab0 arg3:30 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x5614f89444c0 arg3:2846 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:4 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-124366848 
+13:43:40  26572  oggenc    tracepoint:syscalls:sys_enter_exit_group 
+arg1:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_arch_prctl 
+arg1:12289 arg2:-439631888 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_access 
+arg1:0x7f2bb98a75b0 arg2:4 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb98a4a61 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbb1d0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:232092 arg3:1 arg4:2 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb98aec70 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbb398 arg3:832 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbb230 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:8192 arg3:3 arg4:34 arg5:-1 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:2785360 arg3:5 arg4:2050 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1184714752 arg2:2093056 arg3:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1182621696 arg2:118784 arg3:3 arg4:2066 arg5:3 arg6:573440 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb98474d0 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbb378 arg3:832 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbb210 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:2273296 arg3:5 arg4:2050 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1187397632 arg2:2097152 arg3:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1185300480 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:172032 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb98479c0 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbb358 arg3:832 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbb1f0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:426016 arg3:1 arg4:2050 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1187962880 arg2:344064 arg3:5 arg4:2066 arg5:3 arg6:36864 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1187618816 arg2:36864 arg3:1 arg4:2066 arg5:3 arg6:380928 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1187581952 arg2:12288 arg3:3 arg4:2066 arg5:3 arg6:413696 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb9847eb0 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbb338 arg3:832 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbb1d0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:1331224 arg3:1 arg4:2050 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1189281792 arg2:638976 arg3:5 arg4:2066 arg5:3 arg6:53248 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1188642816 arg2:634880 arg3:1 arg4:2066 arg5:3 arg6:692224 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1188007936 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:1323008 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb98483a0 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbb318 arg3:832 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbb1b0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:2121744 arg3:5 arg4:2050 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1191440384 arg2:2097152 arg3:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1189343232 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:20480 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb9848890 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbb2f8 arg3:832 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_lseek 
+arg1:3 arg2:0x318 arg3:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbb1b0 arg3:68 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbb190 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_lseek 
+arg1:3 arg2:0x318 arg3:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbae00 arg3:68 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_lseek 
+arg1:3 arg2:0x360 arg3:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cbae20 arg3:32 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:1852992 arg3:1 arg4:2050 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1193177088 arg2:1675264 arg3:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1193177088 arg2:1359872 arg3:5 arg4:2066 arg5:3 arg6:139264 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1191817216 arg2:311296 arg3:1 arg4:2066 arg5:3 arg6:1499136 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1191501824 arg2:24576 arg3:3 arg4:2066 arg5:3 arg6:1810432 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:-1191477248 arg2:13888 arg3:3 arg4:50 arg5:-1 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:8192 arg3:3 arg4:34 arg5:-1 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_arch_prctl 
+arg1:4098 arg2:-1193319360 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1191501824 arg2:16384 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1189343232 arg2:4096 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1188007936 arg2:4096 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1187581952 arg2:8192 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1185300480 arg2:4096 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1182621696 arg2:114688 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-2089242624 arg2:4096 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mprotect 
+arg1:-1182089216 arg2:4096 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_munmap 
+arg1:-1182494720 arg2:232092 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2080178176 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7f2bb8f83a80 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7f2bb8fb7900 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_mmap 
+arg1:0 arg2:3346512 arg3:1 arg4:2 arg5:3 arg6:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_getpid 
+ 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7fffe5cbc3e2 arg3:0 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:3 arg2:0x7fffe5cbbb20 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x7fffe5cbb860 arg3:524288 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:4 arg2:0x7fffe5cbb6b0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:4 arg2:0x55db84011940 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:4 arg2:0x55db84011940 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:4 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x55db840119b0 arg3:0 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x55db84011c10 arg3:0 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x55db84011a50 arg3:0 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x55db84011b50 arg3:0 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x55db84011bd0 arg3:0 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x55db84011ad0 arg3:0 arg4:0 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb9640 arg3:41 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_openat 
+arg1:-100 arg2:0x55db84011dd0 arg3:577 arg4:438 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8da0 arg3:95 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2080043008 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2079907840 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2079772672 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_newfstat 
+arg1:4 arg2:0x7fffe5cbb320 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2079629312 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2079637504 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db8406b51a arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f2bb8fb7563 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:31 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f2bb8fb7563 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:31 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f2bb8fb7563 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:31 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f2bb8fb7563 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:31 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f2bb8fb7563 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:31 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f2bb8fb7563 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:31 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7f2bb8fb7563 arg3:1 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:31 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x55db84010650 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_read 
+arg1:3 arg2:0x7fffe5cba460 arg3:4096 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2079760384 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8dc0 arg3:49 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8dc0 arg3:25 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8dc0 arg3:24 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8dc0 arg3:23 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:2 arg2:0x7fffe5cb8e20 arg3:29 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:3 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_write 
+arg1:4 arg2:0x55db840744c0 arg3:3565 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_close 
+arg1:4 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_brk 
+arg1:-2079764480 
+13:43:50  26595  oggenc    tracepoint:syscalls:sys_enter_exit_group 
+arg1:0 
+
+

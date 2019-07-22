@@ -2,7 +2,7 @@
 // and pulls data from table.html, which I took from the internet
 // Currently doesn't work
 #!/usr/bin/env bpftrace
-#include <keyutils.h>
+
 
 BEGIN
 {
@@ -25,7 +25,7 @@ tracepoint:syscalls:sys_enter_write /comm == "readmeme"/
 
     printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->buf, args->count);
 }
-/*
+
 tracepoint:syscalls:sys_enter_open /comm == "readmeme"/
 {
     time("%H:%M:%S  ");
@@ -79,7 +79,7 @@ tracepoint:syscalls:sys_enter_lseek /comm == "readmeme"/
     time("%H:%M:%S  ");
     printf("%-6d %-9s %s \n", pid, comm, probe);
 
-    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->offset, args->origin);
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->offset, args->whence);
 }
 
 tracepoint:syscalls:sys_enter_mmap /comm == "readmeme"/
@@ -129,7 +129,7 @@ tracepoint:syscalls:sys_enter_rt_sigprocmask /comm == "readmeme"/
 
     printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->how, args->nset, args->oset, args->sigsetsize);
 }
-
+/*
 tracepoint:syscalls:sys_enter_rt_sigreturn /comm == "readmeme"/
 {
     time("%H:%M:%S  ");

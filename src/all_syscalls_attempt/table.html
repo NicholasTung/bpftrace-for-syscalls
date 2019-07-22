@@ -10,6 +10,7 @@ sendfile -> sendfile64
 sys__sysctl -> sys_sysctl
 umount2 -> umount
 stub_execveat -> execveat
+lseek: unsigned int origin -> whence
 
 goodbye:
 sysfs
@@ -48,7 +49,7 @@ entere_xecveat, but was it ever there
 <tr><td>5</td><td>sys_newfstat</td><td>unsigned int fd</td><td>struct stat *statbuf</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>6</td><td>sys_newlstat</td><td>fconst char *filename</td><td>struct stat *statbuf</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>7</td><td>sys_poll</td><td>struct poll_fd *ufds</td><td>unsigned int nfds</td><td>long timeout_msecs</td><td></td><td></td><td></td></tr>
-<tr><td>8</td><td>sys_lseek</td><td>unsigned int fd</td><td>off_t offset</td><td>unsigned int origin</td><td></td><td></td><td></td></tr>
+<tr><td>8</td><td>sys_lseek</td><td>unsigned int fd</td><td>off_t offset</td><td>unsigned int whence</td><td></td><td></td><td></td></tr>
 <tr><td>9</td><td>sys_mmap</td><td>unsigned long addr</td><td>unsigned long len</td><td>unsigned long prot</td><td>unsigned long flags</td><td>unsigned long fd</td><td>unsigned long off</td></tr>
 <tr><td>10</td><td>sys_mprotect</td><td>unsigned long start</td><td>size_t len</td><td>unsigned long prot</td><td></td><td></td><td></td></tr>
 <tr><td>11</td><td>sys_munmap</td><td>unsigned long addr</td><td>size_t len</td><td></td><td></td><td></td><td></td></tr>
