@@ -1,0 +1,2543 @@
+// This script is created using the python script genTracer.py, 
+// and pulls data from table.html, which I took from the internet
+// Fixed by Shachee, my mentor
+// Syscalls are specific to my system, so there may be variations required for others
+
+// Usage: sudo bpftrace trace.bt -I /usr/lib/modules/5.0.8-arch1-1-ARCH/build/include/uapi/linux 
+// -I /usr/lib/modules/5.0.8-arch1-1-ARCH/build/include/linux PROCESS_NAME
+#!/usr/bin/env bpftrace
+
+//#include <include/keyutils.h>
+#include <signal.h>
+//#include <capability.h>
+#include <aio_abi.h>
+
+BEGIN
+{
+    printf("Tracing syscalls for %s. Ctrl-C to stop.\n", str($1));
+    printf("%-9s %-6s %s \n", "TIME", "PID", "EVENT");
+}
+
+tracepoint:syscalls:sys_enter_read /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->buf, args->count);
+}
+
+tracepoint:syscalls:sys_enter_write /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->buf, args->count);
+}
+
+tracepoint:syscalls:sys_enter_open /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%d \n",  args->filename, args->flags, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_close /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->fd);
+}
+
+tracepoint:syscalls:sys_enter_newstat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->filename, args->statbuf);
+}
+
+tracepoint:syscalls:sys_enter_newfstat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->fd, args->statbuf);
+}
+
+tracepoint:syscalls:sys_enter_newlstat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->filename, args->statbuf);
+}
+
+tracepoint:syscalls:sys_enter_poll /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%d \n",  args->ufds, args->nfds, args->timeout_msecs);
+}
+
+tracepoint:syscalls:sys_enter_lseek /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->offset, args->whence);
+}
+
+tracepoint:syscalls:sys_enter_mmap /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d arg5:%d arg6:%d \n",  args->addr, args->len, args->prot, args->flags, args->fd, args->off);
+}
+
+tracepoint:syscalls:sys_enter_mprotect /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->start, args->len, args->prot);
+}
+
+tracepoint:syscalls:sys_enter_munmap /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->addr, args->len);
+}
+
+tracepoint:syscalls:sys_enter_brk /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->brk);
+}
+
+tracepoint:syscalls:sys_enter_rt_sigaction /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->sig, args->act, args->oact, args->sigsetsize);
+}
+
+tracepoint:syscalls:sys_enter_rt_sigprocmask /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->how, args->nset, args->oset, args->sigsetsize);
+}
+
+/*
+tracepoint:syscalls:sys_enter_rt_sigreturn /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->__unused);
+}
+*/
+tracepoint:syscalls:sys_enter_ioctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->fd, args->cmd, args->arg);
+}
+
+tracepoint:syscalls:sys_enter_pread64 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p \n",  args->fd, args->buf, args->count, args->pos);
+}
+
+tracepoint:syscalls:sys_enter_pwrite64 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p \n",  args->fd, args->buf, args->count, args->pos);
+}
+
+
+tracepoint:syscalls:sys_enter_readv /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->vec, args->vlen);
+}
+
+tracepoint:syscalls:sys_enter_writev /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->vec, args->vlen);
+}
+
+tracepoint:syscalls:sys_enter_access /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->filename, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_pipe /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->fildes);
+}
+
+tracepoint:syscalls:sys_enter_select /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%p arg5:%p \n",  args->n, args->inp, args->outp, args->exp, args->tvp);
+}
+
+tracepoint:syscalls:sys_enter_sched_yield /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_mremap /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d arg5:%d \n",  args->addr, args->old_len, args->new_len, args->flags, args->new_addr);
+}
+
+tracepoint:syscalls:sys_enter_msync /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->start, args->len, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_mincore /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p \n",  args->start, args->len, args->vec);
+}
+
+tracepoint:syscalls:sys_enter_madvise /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->start, args->len_in, args->behavior);
+}
+
+tracepoint:syscalls:sys_enter_shmget /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%d \n",  args->key, args->size, args->shmflg);
+}
+
+tracepoint:syscalls:sys_enter_shmat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->shmid, args->shmaddr, args->shmflg);
+}
+
+tracepoint:syscalls:sys_enter_shmctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p \n",  args->shmid, args->cmd, args->buf);
+}
+
+tracepoint:syscalls:sys_enter_dup /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->fildes);
+}
+
+tracepoint:syscalls:sys_enter_dup2 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->oldfd, args->newfd);
+}
+
+tracepoint:syscalls:sys_enter_pause /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+
+
+tracepoint:syscalls:sys_enter_nanosleep /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->rqtp, args->rmtp);
+}
+
+tracepoint:syscalls:sys_enter_getitimer /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->which, args->value);
+}
+
+tracepoint:syscalls:sys_enter_alarm /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->seconds);
+}
+
+tracepoint:syscalls:sys_enter_setitimer /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->which, args->value, args->ovalue);
+}
+
+tracepoint:syscalls:sys_enter_getpid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_sendfile64 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p arg4:%d \n",  args->out_fd, args->in_fd, args->offset, args->count);
+}
+
+tracepoint:syscalls:sys_enter_socket /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->family, args->type, args->protocol);
+}
+
+tracepoint:syscalls:sys_enter_connect /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->uservaddr, args->addrlen);
+}
+
+tracepoint:syscalls:sys_enter_accept /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->fd, args->upeer_sockaddr, args->upeer_addrlen);
+}
+
+tracepoint:syscalls:sys_enter_sendto /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p arg5:%p arg6:%d \n",  args->fd, args->buff, args->len, args->flags, args->addr, args->addr_len);
+}
+
+tracepoint:syscalls:sys_enter_recvfrom /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p arg5:%p arg6:%p \n",  args->fd, args->ubuf, args->size, args->flags, args->addr, args->addr_len);
+}
+
+tracepoint:syscalls:sys_enter_sendmsg /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->fd, args->msg, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_recvmsg /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->msg, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_shutdown /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->fd, args->how);
+}
+
+tracepoint:syscalls:sys_enter_bind /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->umyaddr, args->addrlen);
+}
+
+tracepoint:syscalls:sys_enter_listen /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->fd, args->backlog);
+}
+
+tracepoint:syscalls:sys_enter_getsockname /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->fd, args->usockaddr, args->usockaddr_len);
+}
+
+tracepoint:syscalls:sys_enter_getpeername /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->fd, args->usockaddr, args->usockaddr_len);
+}
+
+tracepoint:syscalls:sys_enter_socketpair /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p \n",  args->family, args->type, args->protocol, args->usockvec);
+}
+
+tracepoint:syscalls:sys_enter_setsockopt /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p arg5:%d \n",  args->fd, args->level, args->optname, args->optval, args->optlen);
+}
+
+tracepoint:syscalls:sys_enter_getsockopt /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p arg5:%p \n",  args->fd, args->level, args->optname, args->optval, args->optlen);
+}
+
+tracepoint:syscalls:sys_enter_clone /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%d arg2:%d arg3:%p arg4:%p \n",  args->clone_flags, args->newsp, args->ptid, args->ctid);
+    printf("arg1:%d arg2:%d \n",  args->clone_flags, args->newsp);//, args->ptid, args->ctid);
+}
+
+tracepoint:syscalls:sys_enter_fork /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_vfork /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_execve /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%c arg3:%c \n",  args->filename, args->argv, args->envp);
+}
+
+tracepoint:syscalls:sys_enter_exit /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->error_code);
+}
+
+tracepoint:syscalls:sys_enter_wait4 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%p \n",  args->upid, args->stat_addr, args->options, args->ru);
+}
+
+tracepoint:syscalls:sys_enter_kill /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->pid, args->sig);
+}
+
+tracepoint:syscalls:sys_enter_newuname /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->name);
+}
+
+tracepoint:syscalls:sys_enter_semget /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%d \n",  args->key, args->nsems, args->semflg);
+}
+
+tracepoint:syscalls:sys_enter_semop /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->semid, args->tsops, args->nsops);
+}
+
+
+tracepoint:syscalls:sys_enter_semctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p \n",  args->semid, args->semnum, args->cmd, args->arg);
+}
+
+tracepoint:syscalls:sys_enter_shmdt /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->shmaddr);
+}
+
+tracepoint:syscalls:sys_enter_msgget /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->key, args->msgflg);
+}
+
+tracepoint:syscalls:sys_enter_msgsnd /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d \n",  args->msqid, args->msgp, args->msgsz, args->msgflg);
+}
+
+tracepoint:syscalls:sys_enter_msgrcv /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d arg5:%d \n",  args->msqid, args->msgp, args->msgsz, args->msgtyp, args->msgflg);
+}
+
+tracepoint:syscalls:sys_enter_msgctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p \n",  args->msqid, args->cmd, args->buf);
+}
+
+tracepoint:syscalls:sys_enter_fcntl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->fd, args->cmd, args->arg);
+}
+
+tracepoint:syscalls:sys_enter_flock /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->fd, args->cmd);
+}
+
+tracepoint:syscalls:sys_enter_fsync /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->fd);
+}
+
+tracepoint:syscalls:sys_enter_fdatasync /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->fd);
+}
+
+tracepoint:syscalls:sys_enter_truncate /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->path, args->length);
+}
+
+tracepoint:syscalls:sys_enter_ftruncate /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->fd, args->length);
+}
+
+tracepoint:syscalls:sys_enter_getdents /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->dirent, args->count);
+}
+
+tracepoint:syscalls:sys_enter_getcwd /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->buf, args->size);
+}
+
+tracepoint:syscalls:sys_enter_chdir /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->filename);
+}
+
+tracepoint:syscalls:sys_enter_fchdir /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->fd);
+}
+
+tracepoint:syscalls:sys_enter_rename /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->oldname, args->newname);
+}
+
+tracepoint:syscalls:sys_enter_mkdir /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->pathname, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_rmdir /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->pathname);
+}
+
+tracepoint:syscalls:sys_enter_creat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->pathname, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_link /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->oldname, args->newname);
+}
+
+tracepoint:syscalls:sys_enter_unlink /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->pathname);
+}
+
+tracepoint:syscalls:sys_enter_symlink /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->oldname, args->newname);
+}
+
+tracepoint:syscalls:sys_enter_readlink /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d \n",  args->path, args->buf, args->bufsiz);
+}
+
+tracepoint:syscalls:sys_enter_chmod /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->filename, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_fchmod /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->fd, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_chown /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->filename, args->user, args->group);
+}
+
+tracepoint:syscalls:sys_enter_fchown /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p \n",  args->fd, args->user, args->group);
+}
+
+tracepoint:syscalls:sys_enter_lchown /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->filename, args->user, args->group);
+}
+
+tracepoint:syscalls:sys_enter_umask /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->mask);
+}
+
+tracepoint:syscalls:sys_enter_gettimeofday /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->tv, args->tz);
+}
+
+tracepoint:syscalls:sys_enter_getrlimit /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->resource, args->rlim);
+}
+
+tracepoint:syscalls:sys_enter_getrusage /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->who, args->ru);
+}
+
+tracepoint:syscalls:sys_enter_sysinfo /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->info);
+}
+/*
+tracepoint:syscalls:sys_enter_times /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->buf);
+}*/
+
+tracepoint:syscalls:sys_enter_ptrace /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d \n",  args->request, args->pid, args->addr, args->data);
+}
+
+tracepoint:syscalls:sys_enter_getuid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_syslog /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->type, args->buf, args->len);
+}
+
+tracepoint:syscalls:sys_enter_getgid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_setuid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->uid);
+}
+
+tracepoint:syscalls:sys_enter_setgid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->gid);
+}
+
+tracepoint:syscalls:sys_enter_geteuid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_getegid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_setpgid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->pid, args->pgid);
+}
+
+tracepoint:syscalls:sys_enter_getppid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_getpgrp /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_setsid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_setreuid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->ruid, args->euid);
+}
+
+tracepoint:syscalls:sys_enter_setregid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->rgid, args->egid);
+}
+
+tracepoint:syscalls:sys_enter_getgroups /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->gidsetsize, args->grouplist);
+}
+
+tracepoint:syscalls:sys_enter_setgroups /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->gidsetsize, args->grouplist);
+}
+
+tracepoint:syscalls:sys_enter_setresuid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->ruid, args->euid, args->suid);
+}
+/*
+tracepoint:syscalls:sys_enter_getresuid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->ruid, args->euid, args->suid);
+}
+*/
+tracepoint:syscalls:sys_enter_setresgid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->rgid, args->egid, args->sgid);
+}
+/*
+tracepoint:syscalls:sys_enter_getresgid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->rgid, args->egid, args->sgid);
+}
+*/
+tracepoint:syscalls:sys_enter_getpgid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->pid);
+}
+
+tracepoint:syscalls:sys_enter_setfsuid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->uid);
+}
+
+tracepoint:syscalls:sys_enter_setfsgid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->gid);
+}
+
+tracepoint:syscalls:sys_enter_getsid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->pid);
+}
+
+/*
+tracepoint:syscalls:sys_enter_capget /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->header, args->dataptr);
+}
+
+tracepoint:syscalls:sys_enter_capset /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->header, args->data);
+}
+*/
+
+tracepoint:syscalls:sys_enter_rt_sigpending /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%p arg2:%d \n",  args->set, args->sigsetsize);
+    printf("arg1: arg2:%d \n", args->sigsetsize);
+}
+
+tracepoint:syscalls:sys_enter_rt_sigtimedwait /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d \n",  args->uthese, args->uinfo, args->uts, args->sigsetsize);
+}
+
+tracepoint:syscalls:sys_enter_rt_sigqueueinfo /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->pid, args->sig, args->uinfo);
+}
+
+tracepoint:syscalls:sys_enter_rt_sigsuspend /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->unewset, args->sigsetsize);
+}
+
+tracepoint:syscalls:sys_enter_sigaltstack /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->uss, args->uoss);
+}
+
+tracepoint:syscalls:sys_enter_utime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->filename, args->times);
+}
+
+tracepoint:syscalls:sys_enter_mknod /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->filename, args->mode, args->dev);
+}
+/*
+tracepoint:syscalls:sys_enter_personality /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->personality);
+}
+*/
+
+tracepoint:syscalls:sys_enter_ustat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->dev, args->ubuf);
+}
+
+tracepoint:syscalls:sys_enter_statfs /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->pathname, args->buf);
+}
+
+tracepoint:syscalls:sys_enter_fstatfs /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->fd, args->buf);
+}
+
+tracepoint:syscalls:sys_enter_getpriority /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->which, args->who);
+}
+
+tracepoint:syscalls:sys_enter_setpriority /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->which, args->who, args->niceval);
+}
+
+tracepoint:syscalls:sys_enter_sched_setparam /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->pid, args->param);
+}
+
+tracepoint:syscalls:sys_enter_sched_getparam /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->pid, args->param);
+}
+
+tracepoint:syscalls:sys_enter_sched_setscheduler /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->pid, args->policy, args->param);
+}
+
+tracepoint:syscalls:sys_enter_sched_getscheduler /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->pid);
+}
+
+tracepoint:syscalls:sys_enter_sched_get_priority_max /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->policy);
+}
+
+tracepoint:syscalls:sys_enter_sched_get_priority_min /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->policy);
+}
+
+tracepoint:syscalls:sys_enter_sched_rr_get_interval /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->pid, args->interval);
+}
+
+tracepoint:syscalls:sys_enter_mlock /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->start, args->len);
+}
+
+tracepoint:syscalls:sys_enter_munlock /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->start, args->len);
+}
+
+tracepoint:syscalls:sys_enter_mlockall /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->flags);
+}
+
+tracepoint:syscalls:sys_enter_munlockall /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_vhangup /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_modify_ldt /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->func, args->ptr, args->bytecount);
+}
+
+tracepoint:syscalls:sys_enter_pivot_root /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->new_root, args->put_old);
+}
+
+tracepoint:syscalls:sys_enter_sysctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->args);
+}
+
+tracepoint:syscalls:sys_enter_prctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d arg5:%d \n",  args->option, args->arg2, args->arg3, args->arg4, args->arg5);
+}
+
+tracepoint:syscalls:sys_enter_arch_prctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->option, args->arg2);
+}
+
+tracepoint:syscalls:sys_enter_adjtimex /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->txc_p);
+}
+
+tracepoint:syscalls:sys_enter_setrlimit /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->resource, args->rlim);
+}
+
+tracepoint:syscalls:sys_enter_chroot /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->filename);
+}
+
+tracepoint:syscalls:sys_enter_sync /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_acct /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->name);
+}
+
+tracepoint:syscalls:sys_enter_settimeofday /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->tv, args->tz);
+}
+
+tracepoint:syscalls:sys_enter_mount /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d arg5:%p \n",  args->dev_name, args->dir_name, args->type, args->flags, args->data);
+}
+
+tracepoint:syscalls:sys_enter_umount /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%p arg2:%d \n",  args->target, args->flags);
+    printf("arg1: arg2:%d \n", args->flags);
+}
+
+tracepoint:syscalls:sys_enter_swapon /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->specialfile, args->swap_flags);
+}
+
+tracepoint:syscalls:sys_enter_swapoff /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->specialfile);
+}
+
+tracepoint:syscalls:sys_enter_reboot /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p \n",  args->magic1, args->magic2, args->cmd, args->arg);
+}
+
+tracepoint:syscalls:sys_enter_sethostname /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->name, args->len);
+}
+
+tracepoint:syscalls:sys_enter_setdomainname /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->name, args->len);
+}
+
+tracepoint:syscalls:sys_enter_iopl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%d arg2:%p \n",  args->level, args->regs);
+    printf("arg1:%d \n",  args->level);
+}
+
+/*
+tracepoint:syscalls:sys_enter_ioperm /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->from, args->num, args->turn_on);
+}
+*/
+
+tracepoint:syscalls:sys_enter_init_module /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->umod, args->len, args->uargs);
+}
+
+tracepoint:syscalls:sys_enter_delete_module /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->name_user, args->flags);
+}
+
+
+/*
+tracepoint:syscalls:sys_enter_quotactl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%p \n",  args->cmd, args->special, args->id, args->addr);
+}*/
+
+
+
+tracepoint:syscalls:sys_enter_gettid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_readahead /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->offset, args->count);
+}
+
+tracepoint:syscalls:sys_enter_setxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d arg5:%d \n",  args->pathname, args->name, args->value, args->size, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_lsetxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d arg5:%d \n",  args->pathname, args->name, args->value, args->size, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_fsetxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d arg5:%d \n",  args->fd, args->name, args->value, args->size, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_getxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d \n",  args->pathname, args->name, args->value, args->size);
+}
+
+tracepoint:syscalls:sys_enter_lgetxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d \n",  args->pathname, args->name, args->value, args->size);
+}
+
+tracepoint:syscalls:sys_enter_fgetxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->fd, args->name, args->value, args->size);
+}
+
+tracepoint:syscalls:sys_enter_listxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d \n",  args->pathname, args->list, args->size);
+}
+
+tracepoint:syscalls:sys_enter_llistxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d \n",  args->pathname, args->list, args->size);
+}
+
+tracepoint:syscalls:sys_enter_flistxattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->list, args->size);
+}
+
+tracepoint:syscalls:sys_enter_removexattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->pathname, args->name);
+}
+
+tracepoint:syscalls:sys_enter_lremovexattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->pathname, args->name);
+}
+
+tracepoint:syscalls:sys_enter_fremovexattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->fd, args->name);
+}
+
+tracepoint:syscalls:sys_enter_tkill /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->pid, args->sig);
+}
+
+tracepoint:syscalls:sys_enter_time /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->tloc);
+}
+
+tracepoint:syscalls:sys_enter_futex /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p arg4:%p arg5:%p arg6:%p \n",  args->uaddr, args->op, args->val, args->utime, args->uaddr2, args->val3);
+}
+
+tracepoint:syscalls:sys_enter_sched_setaffinity /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->pid, args->len, args->user_mask_ptr);
+}
+
+tracepoint:syscalls:sys_enter_sched_getaffinity /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->pid, args->len, args->user_mask_ptr);
+}
+
+tracepoint:syscalls:sys_enter_io_setup /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->nr_events, args->ctxp);
+}
+
+tracepoint:syscalls:sys_enter_io_destroy /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->ctx);
+}
+
+tracepoint:syscalls:sys_enter_io_getevents /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%d arg4:%p \n",  args->ctx_id, args->min_nr, args->nr, args->events);
+}
+
+tracepoint:syscalls:sys_enter_io_submit /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->ctx_id, args->nr, args->iocbpp);
+}
+
+tracepoint:syscalls:sys_enter_io_cancel /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->ctx_id, args->iocb, args->result);
+}
+
+tracepoint:syscalls:sys_enter_lookup_dcookie /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->cookie64, args->buf, args->len);
+}
+
+tracepoint:syscalls:sys_enter_epoll_create /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->size);
+}
+
+tracepoint:syscalls:sys_enter_remap_file_pages /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d arg5:%d \n",  args->start, args->size, args->prot, args->pgoff, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_getdents64 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->dirent, args->count);
+}
+
+tracepoint:syscalls:sys_enter_set_tid_address /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->tidptr);
+}
+
+tracepoint:syscalls:sys_enter_restart_syscall /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_semtimedop /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%p \n",  args->semid, args->tsops, args->nsops, args->timeout);
+}
+
+tracepoint:syscalls:sys_enter_fadvise64 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d \n",  args->fd, args->offset, args->len, args->advice);
+}
+
+tracepoint:syscalls:sys_enter_timer_create /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->which_clock, args->timer_event_spec, args->created_timer_id);
+}
+
+tracepoint:syscalls:sys_enter_timer_settime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p arg4:%p \n",  args->timer_id, args->flags, args->new_setting, args->old_setting);
+}
+
+tracepoint:syscalls:sys_enter_timer_gettime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->timer_id, args->setting);
+}
+
+tracepoint:syscalls:sys_enter_timer_getoverrun /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->timer_id);
+}
+
+tracepoint:syscalls:sys_enter_timer_delete /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->timer_id);
+}
+
+tracepoint:syscalls:sys_enter_clock_settime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->which_clock, args->tp);
+}
+
+tracepoint:syscalls:sys_enter_clock_gettime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->which_clock, args->tp);
+}
+
+tracepoint:syscalls:sys_enter_clock_getres /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->which_clock, args->tp);
+}
+
+tracepoint:syscalls:sys_enter_clock_nanosleep /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p arg4:%p \n",  args->which_clock, args->flags, args->rqtp, args->rmtp);
+}
+
+tracepoint:syscalls:sys_enter_exit_group /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->error_code);
+}
+
+tracepoint:syscalls:sys_enter_epoll_wait /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d \n",  args->epfd, args->events, args->maxevents, args->timeout);
+}
+
+tracepoint:syscalls:sys_enter_epoll_ctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p \n",  args->epfd, args->op, args->fd, args->event);
+}
+
+tracepoint:syscalls:sys_enter_tgkill /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d \n",  args->tgid, args->pid, args->sig);
+}
+
+tracepoint:syscalls:sys_enter_utimes /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->filename, args->utimes);
+}
+
+tracepoint:syscalls:sys_enter_mbind /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p arg5:%d arg6:%p \n",  args->start, args->len, args->mode, args->nmask, args->maxnode, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_set_mempolicy /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->mode, args->nmask, args->maxnode);
+}
+
+tracepoint:syscalls:sys_enter_get_mempolicy /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%d arg5:%d \n",  args->policy, args->nmask, args->maxnode, args->addr, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_mq_open /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p arg4:%p \n",  args->u_name, args->oflag, args->mode, args->u_attr);
+}
+
+tracepoint:syscalls:sys_enter_mq_unlink /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p \n",  args->u_name);
+}
+
+tracepoint:syscalls:sys_enter_mq_timedsend /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%d arg5:%p \n",  args->mqdes, args->u_msg_ptr, args->msg_len, args->msg_prio, args->u_abs_timeout);
+}
+
+tracepoint:syscalls:sys_enter_mq_timedreceive /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%p arg5:%p \n",  args->mqdes, args->u_msg_ptr, args->msg_len, args->u_msg_prio, args->u_abs_timeout);
+}
+
+tracepoint:syscalls:sys_enter_mq_notify /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->mqdes, args->u_notification);
+}
+
+tracepoint:syscalls:sys_enter_mq_getsetattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->mqdes, args->u_mqstat, args->u_omqstat);
+}
+
+tracepoint:syscalls:sys_enter_kexec_load /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p arg4:%d \n",  args->entry, args->nr_segments, args->segments, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_waitid /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d arg5:%p \n",  args->which, args->upid, args->infop, args->options, args->ru);
+}
+/*
+tracepoint:syscalls:sys_enter_add_key /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d \n",  args->_type, args->_description, args->_payload, args->plen);
+}
+
+tracepoint:syscalls:sys_enter_request_key /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p arg4:%d \n",  args->_type, args->_description, args->_callout_info, args->destringid);
+}
+
+tracepoint:syscalls:sys_enter_keyctl /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d arg5:%d \n",  args->option, args->arg2, args->arg3, args->arg4, args->arg5);
+}
+*/
+
+tracepoint:syscalls:sys_enter_ioprio_set /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->which, args->who, args->ioprio);
+}
+
+tracepoint:syscalls:sys_enter_ioprio_get /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->which, args->who);
+}
+
+tracepoint:syscalls:sys_enter_inotify_init /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf(" \n" );
+}
+
+tracepoint:syscalls:sys_enter_inotify_add_watch /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->fd, args->pathname, args->mask);
+}
+
+tracepoint:syscalls:sys_enter_inotify_rm_watch /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->fd, args->wd);
+}
+
+tracepoint:syscalls:sys_enter_migrate_pages /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p arg4:%p \n",  args->pid, args->maxnode, args->old_nodes, args->new_nodes);
+}
+
+tracepoint:syscalls:sys_enter_openat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d \n",  args->dfd, args->filename, args->flags, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_mkdirat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->dfd, args->pathname, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_mknodat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p \n",  args->dfd, args->filename, args->mode, args->dev);
+}
+
+tracepoint:syscalls:sys_enter_fchownat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p arg5:%d \n",  args->dfd, args->filename, args->user, args->group, args->flag);
+}
+
+tracepoint:syscalls:sys_enter_futimesat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->dfd, args->filename, args->utimes);
+}
+
+tracepoint:syscalls:sys_enter_newfstatat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->dfd, args->filename, args->statbuf, args->flag);
+}
+
+tracepoint:syscalls:sys_enter_unlinkat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->dfd, args->pathname, args->flag);
+}
+
+/*
+tracepoint:syscalls:sys_enter_renameat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p \n",  args->olddirfd, args->oldpath, args->newdirfd, args->newpath);
+}
+
+tracepoint:syscalls:sys_enter_linkat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p arg5:%d \n",  args->olddirfd, args->oldname, args->newdirfd, args->newname, args->flags);
+}
+
+
+tracepoint:syscalls:sys_enter_symlinkat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p \n",  args->oldname, args->newfd, args->newname);
+}
+*/
+
+
+tracepoint:syscalls:sys_enter_readlinkat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->dfd, args->pathname, args->buf, args->bufsiz);
+}
+
+tracepoint:syscalls:sys_enter_fchmodat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->dfd, args->filename, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_faccessat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->dfd, args->filename, args->mode);
+}
+
+tracepoint:syscalls:sys_enter_pselect6 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%p arg5:%p arg6:%p \n",  args->n, args->inp, args->outp, args->exp, args->tsp, args->sig);
+}
+
+/*
+tracepoint:syscalls:sys_enter_ppoll /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p arg4:%p arg5:%d \n",  args->ufds, args->nfds, args->tsp, args->sigmask, args->sigsetsize);
+}*/
+
+
+tracepoint:syscalls:sys_enter_unshare /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->unshare_flags);
+}
+
+tracepoint:syscalls:sys_enter_set_robust_list /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d \n",  args->head, args->len);
+}
+
+tracepoint:syscalls:sys_enter_get_robust_list /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p \n",  args->pid, args->head_ptr, args->len_ptr);
+}
+
+tracepoint:syscalls:sys_enter_splice /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p arg5:%d arg6:%d \n",  args->fd_in, args->off_in, args->fd_out, args->off_out, args->len, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_tee /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d \n",  args->fdin, args->fdout, args->len, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_sync_file_range /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->fd, args->offset, args->nbytes, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_vmsplice /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d \n",  args->fd, args->uiov, args->nr_segs, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_move_pages /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p arg4:%p arg5:%p arg6:%d \n",  args->pid, args->nr_pages, args->pages, args->nodes, args->status, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_utimensat /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->dfd, args->filename, args->utimes, args->flags);
+}
+/*
+tracepoint:syscalls:sys_enter_epoll_pwait /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d arg5:%p arg6:%d \n",  args->epfd, args->events, args->maxevents, args->timeout, args->sigmask, args->sigsetsize);
+}*/
+
+tracepoint:syscalls:sys_enter_signalfd /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->ufd, args->user_mask, args->sizemask);
+}
+
+tracepoint:syscalls:sys_enter_timerfd_create /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->clockid, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_eventfd /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->count);
+}
+
+tracepoint:syscalls:sys_enter_fallocate /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p arg4:%p \n",  args->fd, args->mode, args->offset, args->len);
+}
+
+tracepoint:syscalls:sys_enter_timerfd_settime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p arg4:%p \n",  args->ufd, args->flags, args->utmr, args->otmr);
+}
+
+tracepoint:syscalls:sys_enter_timerfd_gettime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p \n",  args->ufd, args->otmr);
+}
+
+tracepoint:syscalls:sys_enter_accept4 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->fd, args->upeer_sockaddr, args->upeer_addrlen, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_signalfd4 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d \n",  args->ufd, args->user_mask, args->sizemask, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_eventfd2 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->count, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_epoll_create1 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->flags);
+}
+
+tracepoint:syscalls:sys_enter_dup3 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->oldfd, args->newfd, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_pipe2 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%p arg2:%d \n",  args->filedes, args->flags);
+    printf("arg1:%p arg2:%d \n",  args->fildes, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_inotify_init1 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->flags);
+}
+
+tracepoint:syscalls:sys_enter_preadv /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d arg5:%d \n",  args->fd, args->vec, args->vlen, args->pos_l, args->pos_h);
+}
+
+tracepoint:syscalls:sys_enter_pwritev /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d arg5:%d \n",  args->fd, args->vec, args->vlen, args->pos_l, args->pos_h);
+}
+
+tracepoint:syscalls:sys_enter_rt_tgsigqueueinfo /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%p \n",  args->tgid, args->pid, args->sig, args->uinfo);
+}
+
+tracepoint:syscalls:sys_enter_perf_event_open /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%d arg5:%d \n",  args->attr_uptr, args->pid, args->cpu, args->group_fd, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_recvmmsg /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d arg5:%p \n",  args->fd, args->mmsg, args->vlen, args->flags, args->timeout);
+}
+
+tracepoint:syscalls:sys_enter_fanotify_init /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->flags, args->event_f_flags);
+}
+
+tracepoint:syscalls:sys_enter_fanotify_mark /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%d arg5:%d \n",  args->fanotify_fd, args->flags, args->mask, args->dfd, args->pathname);
+}
+
+tracepoint:syscalls:sys_enter_prlimit64 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%p arg4:%p \n",  args->pid, args->resource, args->new_rlim, args->old_rlim);
+}
+
+tracepoint:syscalls:sys_enter_name_to_handle_at /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%p arg4:%p arg5:%d \n",  args->dfd, args->name, args->handle, args->mnt_id, args->flag);
+}
+
+tracepoint:syscalls:sys_enter_open_by_handle_at /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%d arg2:%p arg3:%p arg4:%p arg5:%d \n",  args->dfd, args->name, args->handle, args->mnt_id, args->flags);
+    printf("arg1:%d arg2:%p arg3:%p\n",  args->mountdirfd, args->handle, args->flags);
+}
+
+/*
+//Not found
+tracepoint:syscalls:sys_enter_clock_adjtime /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p \n",  args->which_clock, args->tx);
+}*/
+
+tracepoint:syscalls:sys_enter_syncfs /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d \n",  args->fd);
+}
+
+tracepoint:syscalls:sys_enter_sendmmsg /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d \n",  args->fd, args->mmsg, args->vlen, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_setns /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->fd, args->nstype);
+}
+
+tracepoint:syscalls:sys_enter_getcpu /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%p \n",  args->cpup, args->nodep, args->unused);
+}
+
+tracepoint:syscalls:sys_enter_process_vm_readv /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%p arg5:%d arg6:%d \n",  args->pid, args->lvec, args->liovcnt, args->rvec, args->riovcnt, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_process_vm_writev /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%p arg5:%d arg6:%d \n",  args->pid, args->lvec, args->liovcnt, args->rvec, args->riovcnt, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_kcmp /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%p arg3:%d arg4:%d arg5:%d \n",  args->pid1, args->pid2, args->type, args->idx1, args->idx2);
+}
+
+tracepoint:syscalls:sys_enter_finit_module /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->uargs, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_sched_setattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%p arg2:%p arg3:%d \n",  args->pid, args->attr, args->flags);
+    printf("arg1:%p arg2: arg3:%d \n",  args->pid, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_sched_getattr /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%p arg2:%p arg3:%d arg4:%d \n",  args->pid, args->attr, args->size, args->flags);
+    printf("arg1:%p arg2: arg3:%d arg4:%d \n",  args->pid,  args->size, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_renameat2 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p arg5:%d \n",  args->olddfd, args->oldname, args->newdfd, args->newname, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_seccomp /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%p \n",  args->op, args->flags, args->uargs);
+}
+
+tracepoint:syscalls:sys_enter_getrandom /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%p arg2:%d arg3:%d \n",  args->buf, args->count, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_memfd_create /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%p arg2:%d \n",  args->name, args->flags);
+    printf("arg1: arg2:%d \n",  args->flags);
+}
+
+tracepoint:syscalls:sys_enter_kexec_file_load /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d arg4:%p arg5:%d \n",  args->kernel_fd, args->initrd_fd, args->cmdline_len, args->cmdline_ptr, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_bpf /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    //printf("arg1:%d arg2:%p arg3:%d \n",  args->cmd, args->attr, args->size);
+    printf("arg1:%d arg2: arg3:%d \n",  args->cmd,  args->size);
+}
+
+tracepoint:syscalls:sys_enter_membarrier /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d \n",  args->cmd, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_mlock2 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%d arg3:%d \n",  args->start, args->len, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_copy_file_range /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%p arg5:%d arg6:%d \n",  args->fd_in, args->off_in, args->fd_out, args->off_out, args->len, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_preadv2 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d arg5:%d arg6:%d \n",  args->fd, args->vec, args->vlen, args->pos_l, args->pos_h, args->flags);
+}
+
+tracepoint:syscalls:sys_enter_pwritev2 /comm == str($1)/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d arg4:%d arg5:%d arg6:%d \n",  args->fd, args->vec, args->vlen, args->pos_l, args->pos_h, args->flags);
+}
+/*
+//Commented
+*/
