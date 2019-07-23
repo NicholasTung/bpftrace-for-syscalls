@@ -1,0 +1,1 @@
+Did ls, evaluated and printed 2 + 2, mkdir the next folder(trial3), echo this message into description

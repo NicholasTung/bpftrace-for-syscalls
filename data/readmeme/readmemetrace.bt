@@ -1,0 +1,42 @@
+#!/usr/bin/env bpftrace
+
+BEGIN
+{
+	printf("Tracing syscalls for something. Ctrl-C to stop.\n");
+	printf("%-9s %-6s %s\n", "TIME", "PID", "EVENT");
+}
+
+tracepoint:syscalls:sys_enter_read /comm == "readmeme"/
+{
+	time("%H:%M:%S  ");
+	printf("%-6d %-9s %s\n", pid, comm, probe); 
+	printf("fd: %d buf: %p, count: %d\n", args->fd, args->buf, args->count);
+}
+tracepoint:syscalls:sys_enter_open /comm == "readmeme"/
+{
+	time("%H:%M:%S  ");
+	printf("%-6d %-9s %s\n", pid, comm, probe); 
+	printf("filename: %s flags: %d, mode: %d\n", str(args->filename), args->flags, args->mode);
+}
+tracepoint:syscalls:sys_enter_mmap /comm == "readmeme"/ 
+{
+	time("%H:%M:%S  ");
+	printf("%-6d %-9s %s\n", pid, comm, probe); 
+	printf("addr: %d len: %d prot: %d flags: %d fd: %d off: %d\n",
+			args->addr, args->len, args->prot, args->flags, args->fd, args->off
+	);		
+}
+tracepoint:syscalls:sys_enter_close /comm == "readmeme"/
+{
+	time("%H:%M:%S  ");
+	printf("%-6d %-9s %s\n", pid, comm, probe);
+	printf("fd: %d\n", args->fd);
+}
+
+tracepoint:syscalls:sys_enter_write /comm == "readmeme"/
+{
+    time("%H:%M:%S  ");
+    printf("%-6d %-9s %s \n", pid, comm, probe);
+
+    printf("arg1:%d arg2:%p arg3:%d \n",  args->fd, args->buf, args->count);
+}

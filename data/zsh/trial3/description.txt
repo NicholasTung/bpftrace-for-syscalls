@@ -1,0 +1,10 @@
+tried to cd, denied permission 
+ cd into another dir 
+ cd more
+ echo text into sh file
+ messed up chmod twice, used chmod --help
+ chmod sh script to make it executable
+cd using tab cycle/complete 
+ ls
+ run script
+ echo text into description
