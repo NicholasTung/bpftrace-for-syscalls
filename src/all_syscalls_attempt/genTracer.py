@@ -25,8 +25,7 @@ with open("types.txt", "w") as file:
     for t in typeSet:
         file.write("{}\n".format(t))
 
-# change this to the process that is going to be traced
-PROCESS = "readmeme"
+
 # NOTE: must check for entere_xecveat in the generated tracer 
 # because it just kind of appeared but isn't an available syscall
 
@@ -40,6 +39,7 @@ with open("trace.bt", "w") as bt:
         {
             printf("Tracing syscalls for something. Ctrl-C to stop.\\n");
             printf("%-9s %-6s %s \\n", "TIME", "PID", "EVENT");
+            @start = nsecs;
         }
         """
     )
@@ -55,11 +55,11 @@ with open("trace.bt", "w") as bt:
 
         bt.write(
             """
-            tracepoint:syscalls:sys_enter_{} /comm == "{}"/
+            tracepoint:syscalls:sys_enter_{} /comm == {}/
             {{
-                time("%H:%M:%S  ");
-                printf("%-6d %-9s %s \\n", pid, comm, probe);
-            """.format(name, PROCESS)
+                printf("%d µs: ", (nsecs - @start)/1000);
+                printf("%-6d %-9s %15s ", pid, comm, probe);
+            """.format(name, "str($1)")
         )
 
         args = [arg1, arg2, arg3, arg4, arg5, arg6]
@@ -70,6 +70,7 @@ with open("trace.bt", "w") as bt:
         argF = list()
         argStruct = list()
         j = 0
+        argF.append("[{}]".format(len(args)))
         for arg in args:
             argF.append("{}:{}".format(
                 argsList[j], parseArgs.getPrintType(arg)))
