@@ -1,4 +1,4 @@
-
+# Writes the .bt tracer using a table of syscalls
 import pandas as pd
 
 table = pd.read_pickle("./syscalls.pkl")
@@ -7,7 +7,7 @@ print(table.dtypes)
 columns = list(table)
 argsList = ["arg{}".format(i) for i in range(6)]
 
-
+# for convenience dealing with the arguments
 class SyscallArg:
     def __init__(self, combined):
         sp = combined.split()
@@ -34,9 +34,10 @@ class SyscallArg:
         return "%p"
 
 
+# gets all the types of arguments 
+# so that I can handle weird types defined in the kernel
+# and use the correct print character
 def getAllTypes():
-    # This part was just to get all of the types for arguments,
-    # so that I could handle them properly when printing them
     typeSet = set()
 
     for col in argsList:
@@ -48,6 +49,7 @@ def getAllTypes():
             file.write("{}\n".format(t))
 
 
+# Notes: uname:newuname, stat:newstat, fstat:newfstat, lstat:newlstat, sendfile:sendfile64
 def writeTracer():
     with open("trace.bt", "w") as bt:
         bt.write(
@@ -97,7 +99,7 @@ def writeTracer():
             }}
             """.format(
                 " ".join(argFormatStrs),
-                "," if len(argFormatStrs) > 0 else "",
+                "," if len(argFormatStrs) > 1 else "",
                 ",".join(argStructAccessStrs)
             )
 
