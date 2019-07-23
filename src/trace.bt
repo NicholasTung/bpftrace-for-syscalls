@@ -90,7 +90,7 @@ tracepoint:syscalls:sys_enter_mmap /comm == str($1)/
     printf("%d µs:   ", (nsecs - @start)/1000);
     printf("%-6d %-9s %45s ", pid, comm, probe);
 
-    printf("[5] arg0:%d arg1:%d arg2:%d arg3:%d arg4:%d \n",  args->addr, args->len, args->prot, args->flags, args->fd);
+    printf("[5] arg0:%p arg1:%d arg2:%d arg3:%d arg4:%d \n",  args->addr, args->len, args->prot, args->flags, args->fd);
 }
 
 tracepoint:syscalls:sys_enter_mprotect /comm == str($1)/
