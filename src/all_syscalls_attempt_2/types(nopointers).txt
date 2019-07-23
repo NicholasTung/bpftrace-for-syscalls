@@ -1,0 +1,3 @@
+cap_user_data_t
+const cap_user_data_t
+cap_user_header_t

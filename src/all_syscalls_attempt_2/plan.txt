@@ -1,0 +1,7 @@
+1. download linux
+2. grep for syscall define
+3. parse each line for real arguments and stuff
+4. remake generator script
+5. regenerate tracer
+6. try fixing the tracer not working for some syscalls
+7. 
