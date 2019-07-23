@@ -1,9 +1,9 @@
 
-#!/usr/bin/env bpftrace
+//#!/usr/bin/env bpftrace
 
 //#include <include/keyutils.h>
 #include <signal.h>
-//#include <capability.h>
+#include <capability.h>
 #include <aio_abi.h>
 
 BEGIN
@@ -44,7 +44,6 @@ tracepoint:syscalls:sys_enter_close /comm == str($1)/
 
     printf("[1] arg0:%d \n",  args->fd);
 }
-// Not found
 
 tracepoint:syscalls:sys_enter_newstat /comm == str($1)/
 {
@@ -133,7 +132,7 @@ tracepoint:syscalls:sys_enter_rt_sigprocmask /comm == str($1)/
 
     printf("[4] arg0:%d arg1:%p arg2:%p arg3:%d \n",  args->how, args->nset, args->oset, args->sigsetsize);
 }
-/*
+
 tracepoint:syscalls:sys_enter_rt_sigreturn /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -141,7 +140,7 @@ tracepoint:syscalls:sys_enter_rt_sigreturn /comm == str($1)/
 
     printf("[0] \n" );
 }
-*/
+
 tracepoint:syscalls:sys_enter_ioctl /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -517,16 +516,15 @@ tracepoint:syscalls:sys_enter_kill /comm == str($1)/
 
     printf("[2] arg0:%d arg1:%d \n",  args->pid, args->sig);
 }
-// Not found
-/*
-tracepoint:syscalls:sys_enter_uname2 /comm == str($1)/
+
+tracepoint:syscalls:sys_enter_newuname /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
     printf("%-6d %-9s %45s ", pid, comm, probe);
 
     printf("[1] arg0:%p \n",  args->name);
 }
-*/
+
 tracepoint:syscalls:sys_enter_semget /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -814,7 +812,7 @@ tracepoint:syscalls:sys_enter_sysinfo /comm == str($1)/
 
     printf("[1] arg0:%p \n",  args->info);
 }
-/*
+
 tracepoint:syscalls:sys_enter_times /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -822,7 +820,7 @@ tracepoint:syscalls:sys_enter_times /comm == str($1)/
 
     printf("[1] arg0:%p \n",  args->tbuf);
 }
-*/
+
 tracepoint:syscalls:sys_enter_ptrace /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -958,7 +956,7 @@ tracepoint:syscalls:sys_enter_setresuid /comm == str($1)/
 
     printf("[3] arg0:%d arg1:%d arg2:%d \n",  args->ruid, args->euid, args->suid);
 }
-/*
+
 tracepoint:syscalls:sys_enter_getresuid /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -966,7 +964,7 @@ tracepoint:syscalls:sys_enter_getresuid /comm == str($1)/
 
     printf("[3] arg0:%p arg1:%p arg2:%p \n",  args->ruidp, args->euidp, args->suidp);
 }
-*/
+
 tracepoint:syscalls:sys_enter_setresgid /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -974,7 +972,7 @@ tracepoint:syscalls:sys_enter_setresgid /comm == str($1)/
 
     printf("[3] arg0:%d arg1:%d arg2:%d \n",  args->rgid, args->egid, args->sgid);
 }
-/*
+
 tracepoint:syscalls:sys_enter_getresgid /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -982,7 +980,7 @@ tracepoint:syscalls:sys_enter_getresgid /comm == str($1)/
 
     printf("[3] arg0:%p arg1:%p arg2:%p \n",  args->rgidp, args->egidp, args->sgidp);
 }
-*/
+
 tracepoint:syscalls:sys_enter_getpgid /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1014,7 +1012,7 @@ tracepoint:syscalls:sys_enter_getsid /comm == str($1)/
 
     printf("[1] arg0:%d \n",  args->pid);
 }
-/*
+
 tracepoint:syscalls:sys_enter_capget /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1022,8 +1020,7 @@ tracepoint:syscalls:sys_enter_capget /comm == str($1)/
 
     printf("[2] arg0:%p arg1:%p \n",  args->header, args->dataptr);
 }
-*/
-/*
+
 tracepoint:syscalls:sys_enter_capset /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1031,7 +1028,7 @@ tracepoint:syscalls:sys_enter_capset /comm == str($1)/
 
     printf("[2] arg0:%p arg1:%p \n",  args->header, args->data);
 }
-*/
+
 tracepoint:syscalls:sys_enter_rt_sigpending /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1336,16 +1333,15 @@ tracepoint:syscalls:sys_enter_mount /comm == str($1)/
 
     printf("[5] arg0:%p arg1:%p arg2:%p arg3:%d arg4:%p \n",  args->dev_name, args->dir_name, args->type, args->flags, args->data);
 }
-// Not found
-/*
-tracepoint:syscalls:sys_enter_umount2 /comm == str($1)/
+
+tracepoint:syscalls:sys_enter_umount /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
     printf("%-6d %-9s %45s ", pid, comm, probe);
 
     printf("[0] \n" );
 }
-*/
+
 tracepoint:syscalls:sys_enter_swapon /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1393,7 +1389,7 @@ tracepoint:syscalls:sys_enter_iopl /comm == str($1)/
 
     printf("[1] arg0:%d \n",  args->level);
 }
-/*
+
 tracepoint:syscalls:sys_enter_ioperm /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1401,7 +1397,7 @@ tracepoint:syscalls:sys_enter_ioperm /comm == str($1)/
 
     printf("[3] arg0:%d arg1:%d arg2:%d \n",  args->from, args->num, args->turn_on);
 }
-*/
+
 tracepoint:syscalls:sys_enter_init_module /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1417,7 +1413,7 @@ tracepoint:syscalls:sys_enter_delete_module /comm == str($1)/
 
     printf("[2] arg0:%p arg1:%d \n",  args->name_user, args->flags);
 }
-/*
+
 tracepoint:syscalls:sys_enter_quotactl /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1425,7 +1421,7 @@ tracepoint:syscalls:sys_enter_quotactl /comm == str($1)/
 
     printf("[4] arg0:%d arg1:%p arg2:%d arg3:%p \n",  args->cmd, args->special, args->id, args->addr);
 }
-*/
+
 tracepoint:syscalls:sys_enter_gettid /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1881,7 +1877,7 @@ tracepoint:syscalls:sys_enter_waitid /comm == str($1)/
 
     printf("[5] arg0:%d arg1:%d arg2:%p arg3:%d arg4:%p \n",  args->which, args->upid, args->infop, args->options, args->ru);
 }
-/*
+
 tracepoint:syscalls:sys_enter_add_key /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1889,7 +1885,7 @@ tracepoint:syscalls:sys_enter_add_key /comm == str($1)/
 
     printf("[0] \n" );
 }
-*/
+
 /*
 tracepoint:syscalls:sys_enter_request_key /comm == str($1)/
 {
@@ -1899,7 +1895,7 @@ tracepoint:syscalls:sys_enter_request_key /comm == str($1)/
     printf("[4] arg0:%p arg1:%p arg2:%p arg3:%d \n",  args->_type, args->_description, args->_callout_info, args->destringid);
 }
 */
-/*
+
 tracepoint:syscalls:sys_enter_keyctl /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -1907,7 +1903,7 @@ tracepoint:syscalls:sys_enter_keyctl /comm == str($1)/
 
     printf("[5] arg0:%d arg1:%d arg2:%d arg3:%d arg4:%d \n",  args->option, args->arg2, args->arg3, args->arg4, args->arg5);
 }
-*/
+
 tracepoint:syscalls:sys_enter_ioprio_set /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2011,7 +2007,7 @@ tracepoint:syscalls:sys_enter_unlinkat /comm == str($1)/
 
     printf("[3] arg0:%d arg1:%p arg2:%d \n",  args->dfd, args->pathname, args->flag);
 }
-/*
+
 tracepoint:syscalls:sys_enter_renameat /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2019,8 +2015,8 @@ tracepoint:syscalls:sys_enter_renameat /comm == str($1)/
 
     printf("[4] arg0:%d arg1:%p arg2:%d arg3:%p \n",  args->olddfd, args->oldname, args->newdfd, args->newname);
 }
-*/
-/*
+
+
 tracepoint:syscalls:sys_enter_linkat /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2028,8 +2024,8 @@ tracepoint:syscalls:sys_enter_linkat /comm == str($1)/
 
     printf("[5] arg0:%d arg1:%p arg2:%d arg3:%p arg4:%d \n",  args->olddfd, args->oldname, args->newdfd, args->newname, args->flags);
 }
-*/
-/*
+
+
 tracepoint:syscalls:sys_enter_symlinkat /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2037,7 +2033,7 @@ tracepoint:syscalls:sys_enter_symlinkat /comm == str($1)/
 
     printf("[3] arg0:%p arg1:%d arg2:%p \n",  args->oldname, args->newdfd, args->newname);
 }
-*/
+
 tracepoint:syscalls:sys_enter_readlinkat /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2069,7 +2065,7 @@ tracepoint:syscalls:sys_enter_pselect6 /comm == str($1)/
 
     printf("[5] arg0:%d arg1:%p arg2:%p arg3:%p arg4:%p \n",  args->n, args->inp, args->outp, args->exp, args->tsp);
 }
-/*
+
 tracepoint:syscalls:sys_enter_ppoll /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2077,7 +2073,7 @@ tracepoint:syscalls:sys_enter_ppoll /comm == str($1)/
 
     printf("[5] arg0:%p arg1:%d arg2:%p arg3:%p arg4:%d \n",  args->ufds, args->nfds, args->tsp, args->sigmask, args->sigsetsize);
 }
-*/
+
 tracepoint:syscalls:sys_enter_unshare /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2149,7 +2145,7 @@ tracepoint:syscalls:sys_enter_utimensat /comm == str($1)/
 
     printf("[4] arg0:%d arg1:%p arg2:%p arg3:%d \n",  args->dfd, args->filename, args->utimes, args->flags);
 }
-/*
+
 tracepoint:syscalls:sys_enter_epoll_pwait /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2157,7 +2153,7 @@ tracepoint:syscalls:sys_enter_epoll_pwait /comm == str($1)/
 
     printf("[5] arg0:%d arg1:%p arg2:%d arg3:%d arg4:%p \n",  args->epfd, args->events, args->maxevents, args->timeout, args->sigmask);
 }
-*/
+
 tracepoint:syscalls:sys_enter_signalfd /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2341,7 +2337,7 @@ tracepoint:syscalls:sys_enter_open_by_handle_at /comm == str($1)/
 
     printf("[3] arg0:%d arg1:%p arg2:%d \n",  args->mountdirfd, args->handle, args->flags);
 }
-/*
+
 tracepoint:syscalls:sys_enter_clock_adjtime /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
@@ -2349,7 +2345,7 @@ tracepoint:syscalls:sys_enter_clock_adjtime /comm == str($1)/
 
     printf("[2] arg0:%d arg1:%p \n",  args->which_clock, args->utx);
 }
-*/
+
 tracepoint:syscalls:sys_enter_syncfs /comm == str($1)/
 {
     printf("%d µs:   ", (nsecs - @start)/1000);
