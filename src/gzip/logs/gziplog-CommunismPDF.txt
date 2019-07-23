@@ -1,0 +1,120 @@
+Attaching 317 probes...
+Tracing syscalls for something. Ctrl-C to stop.
+TIME      PID    EVENT 
+7613792 µs:   11788  gzip                  tracepoint:syscalls:sys_enter_brk [1] arg0:0 
+7613853 µs:   11788  gzip           tracepoint:syscalls:sys_enter_arch_prctl [2] arg0:12289 arg1:-2027213936 
+7613933 µs:   11788  gzip               tracepoint:syscalls:sys_enter_access [2] arg0:0x7fb653ab0550 arg1:4 
+7613984 µs:   11788  gzip               tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7fb653aad9fa arg2:524288 arg3:0 
+7614021 µs:   11788  gzip             tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7fff872b1d80 
+7614054 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_mmap [5] arg0:(nil) arg1:235491 arg2:1 arg3:2 arg4:3 
+7614083 µs:   11788  gzip                tracepoint:syscalls:sys_enter_close [1] arg0:3 
+7614171 µs:   11788  gzip               tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7fb653ab7c70 arg2:524288 arg3:0 
+7614205 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7fff872b1f28 arg2:832 
+7614227 µs:   11788  gzip                tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:64 arg2:0 
+7614243 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7fff872b1b20 arg2:784 
+7614271 µs:   11788  gzip                tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:848 arg2:0 
+7614289 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7fff872b1af0 arg2:32 
+7614307 µs:   11788  gzip                tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:880 arg2:0 
+7614324 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7fff872b1aa0 arg2:68 
+7614344 µs:   11788  gzip             tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7fff872b1dd0 
+7614366 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_mmap [5] arg0:(nil) arg1:8192 arg2:3 arg3:34 arg4:-1 
+7614411 µs:   11788  gzip                tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:64 arg2:0 
+7614435 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7fff872b1a20 arg2:784 
+7614452 µs:   11788  gzip                tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:848 arg2:0 
+7614466 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7fff872b1700 arg2:32 
+7614482 µs:   11788  gzip                tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:880 arg2:0 
+7614497 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7fff872b16e0 arg2:68 
+7614514 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_mmap [5] arg0:(nil) arg1:1844408 arg2:1 arg3:2050 arg4:3 
+7614542 µs:   11788  gzip             tracepoint:syscalls:sys_enter_mprotect [3] arg0:1401622528 arg1:1654784 arg2:0 
+7614587 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_mmap [5] arg0:0x7fb6538b1000 arg1:1351680 arg2:5 arg3:2066 arg4:3 
+7614622 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_mmap [5] arg0:0x7fb6539fb000 arg1:299008 arg2:1 arg3:2066 arg4:3 
+7614645 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_mmap [5] arg0:0x7fb653a45000 arg1:24576 arg2:3 arg3:2066 arg4:3 
+7614683 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_mmap [5] arg0:0x7fb653a4b000 arg1:13496 arg2:3 arg3:50 arg4:-1 
+7614729 µs:   11788  gzip                tracepoint:syscalls:sys_enter_close [1] arg0:3 
+7614793 µs:   11788  gzip           tracepoint:syscalls:sys_enter_arch_prctl [2] arg0:4098 arg1:1403323776 
+7614960 µs:   11788  gzip             tracepoint:syscalls:sys_enter_mprotect [3] arg0:1403277312 arg1:12288 arg2:1 
+7615058 µs:   11788  gzip             tracepoint:syscalls:sys_enter_mprotect [3] arg0:-168103936 arg1:4096 arg2:1 
+7615131 µs:   11788  gzip             tracepoint:syscalls:sys_enter_mprotect [3] arg0:1403736064 arg1:4096 arg2:1 
+7615174 µs:   11788  gzip               tracepoint:syscalls:sys_enter_munmap [2] arg0:1403326464 arg1:235491 
+7615353 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:2 arg1:(nil) arg2:0x7fff872b29e0 arg3:8 
+7615386 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:1 arg1:(nil) arg2:0x7fff872b29e0 arg3:8 
+7615404 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:13 arg1:(nil) arg2:0x7fff872b29e0 arg3:8 
+7615422 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:15 arg1:(nil) arg2:0x7fff872b29e0 arg3:8 
+7615441 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:24 arg1:(nil) arg2:0x7fff872b29e0 arg3:8 
+7615461 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:25 arg1:(nil) arg2:0x7fff872b29e0 arg3:8 
+7615480 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:2 arg1:0x7fff872b2940 arg2:(nil) arg3:8 
+7615501 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:1 arg1:0x7fff872b2940 arg2:(nil) arg3:8 
+7615520 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:13 arg1:0x7fff872b2940 arg2:(nil) arg3:8 
+7615539 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:15 arg1:0x7fff872b2940 arg2:(nil) arg3:8 
+7615558 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:24 arg1:0x7fff872b2940 arg2:(nil) arg3:8 
+7615578 µs:   11788  gzip         tracepoint:syscalls:sys_enter_rt_sigaction [4] arg0:25 arg1:0x7fff872b2940 arg2:(nil) arg3:8 
+7615621 µs:   11788  gzip               tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a3f5fb0560 arg2:65536 arg3:0 
+7615663 µs:   11788  gzip               tracepoint:syscalls:sys_enter_openat [4] arg0:3 arg1:0x55a3f5fb4340 arg2:133376 arg3:0 
+7615690 µs:   11788  gzip             tracepoint:syscalls:sys_enter_newfstat [2] arg0:4 arg1:0x55a3f5fb04c0 
+7615819 µs:   11788  gzip                  tracepoint:syscalls:sys_enter_brk [1] arg0:0 
+7615838 µs:   11788  gzip                  tracepoint:syscalls:sys_enter_brk [1] arg0:-148262912 
+7615881 µs:   11788  gzip       tracepoint:syscalls:sys_enter_rt_sigprocmask [4] arg0:0 arg1:0x55a3f5fb0da0 arg2:0x7fff872b25c0 arg3:8 
+7615898 µs:   11788  gzip               tracepoint:syscalls:sys_enter_openat [4] arg0:3 arg1:0x55a3f5fe8f40 arg2:193 arg3:384 
+7616003 µs:   11788  gzip       tracepoint:syscalls:sys_enter_rt_sigprocmask [4] arg0:2 arg1:0x7fff872b25c0 arg2:(nil) arg3:8 
+7616191 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5fe9340 arg2:65536 
+7621552 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7621969 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7624328 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7625802 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7625940 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7627646 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7629076 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7629374 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7630554 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7631707 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7631874 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7632733 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7634034 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7634184 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7634853 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7636045 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7636166 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7636594 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7638665 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7638817 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7639139 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7640588 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7640744 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7640932 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7642776 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7643103 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7643227 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7644330 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7644863 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7645031 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7646213 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7646744 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7646864 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7647699 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7648250 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7648346 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7649349 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7650051 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7650184 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7651237 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7651899 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7652059 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7652951 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff1340 arg2:32768 
+7653278 µs:   11788  gzip                 tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a3f5ff7b3a arg2:6150 
+7653446 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:16384 
+7653659 µs:   11788  gzip                tracepoint:syscalls:sys_enter_write [3] arg0:5 arg1:0x55a3f5fe4740 arg2:11823 
+7653706 µs:   11788  gzip                tracepoint:syscalls:sys_enter_close [1] arg0:4 
+7653725 µs:   11788  gzip            tracepoint:syscalls:sys_enter_utimensat [4] arg0:5 arg1:(nil) arg2:0x7fff872b2460 arg3:0 
+7653745 µs:   11788  gzip               tracepoint:syscalls:sys_enter_fchown [3] arg0:5 arg1:-1 arg2:998 
+7653763 µs:   11788  gzip               tracepoint:syscalls:sys_enter_fchmod [2] arg0:5 arg1:420 
+7653772 µs:   11788  gzip               tracepoint:syscalls:sys_enter_fchown [3] arg0:5 arg1:1000 arg2:-1 
+7653780 µs:   11788  gzip                tracepoint:syscalls:sys_enter_close [1] arg0:5 
+7653794 µs:   11788  gzip       tracepoint:syscalls:sys_enter_rt_sigprocmask [4] arg0:0 arg1:0x55a3f5fb0da0 arg2:0x7fff872b25c0 arg3:8 
+7653811 µs:   11788  gzip             tracepoint:syscalls:sys_enter_unlinkat [3] arg0:3 arg1:0x55a3f5fb4340 arg2:0 
+7654080 µs:   11788  gzip       tracepoint:syscalls:sys_enter_rt_sigprocmask [4] arg0:2 arg1:0x7fff872b25c0 arg2:(nil) arg3:8 
+7654120 µs:   11788  gzip           tracepoint:syscalls:sys_enter_exit_group [1] arg0:0 
+
+
+@start: 29612362607169
+
+
