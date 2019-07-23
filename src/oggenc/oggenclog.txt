@@ -1,926 +1,473 @@
-Attaching 294 probes...
-Tracing syscalls for oggenc. Ctrl-C to stop.
+Attaching 299 probes...
+Tracing syscalls for something. Ctrl-C to stop.
 TIME      PID    EVENT 
-5950024 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:0 
-5950078 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_arch_prctl 
-arg1:12289 arg2:11161200 
-5950144 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_access 
-arg1:0x7f1452ae05b0 arg2:4 
-5950182 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f1452adda61 arg3:524288 arg4:0 
-5950214 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa4050 
-5950235 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:232092 arg3:1 arg4:2 arg5:3 arg6:0 
-5950261 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5950308 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f1452ae7c70 arg3:524288 arg4:0 
-5950343 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa4218 arg3:832 
-5950366 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa40b0 
-5950391 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:8192 arg3:3 arg4:34 arg5:-1 arg6:0 
-5950428 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:2785360 arg3:5 arg4:2050 arg5:3 arg6:0 
-5950456 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1384529920 arg2:2093056 arg3:0 
-5950497 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1386622976 arg2:118784 arg3:3 arg4:2066 arg5:3 arg6:573440 
-5950565 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5950605 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f1452a804d0 arg3:524288 arg4:0 
-5950643 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa41f8 arg3:832 
-5950666 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa4090 
-5950741 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:2273296 arg3:5 arg4:2050 arg5:3 arg6:0 
-5950776 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1381847040 arg2:2097152 arg3:0 
-5950824 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1383944192 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:172032 
-5950884 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5950928 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f1452a809c0 arg3:524288 arg4:0 
-5950958 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa41d8 arg3:832 
-5950978 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa4070 
-5950997 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:426016 arg3:1 arg4:2050 arg5:3 arg6:0 
-5951017 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1381281792 arg2:344064 arg3:5 arg4:2066 arg5:3 arg6:36864 
-5951048 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1381625856 arg2:36864 arg3:1 arg4:2066 arg5:3 arg6:380928 
-5951074 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1381662720 arg2:12288 arg3:3 arg4:2066 arg5:3 arg6:413696 
-5951119 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5951150 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f1452a80eb0 arg3:524288 arg4:0 
-5951178 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa41b8 arg3:832 
-5951196 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa4050 
-5951219 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:1331224 arg3:1 arg4:2050 arg5:3 arg6:0 
-5951247 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1379962880 arg2:638976 arg3:5 arg4:2066 arg5:3 arg6:53248 
-5951280 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1380601856 arg2:634880 arg3:1 arg4:2066 arg5:3 arg6:692224 
-5951310 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1381236736 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:1323008 
-5951358 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5951397 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f1452a813a0 arg3:524288 arg4:0 
-5951425 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa4198 arg3:832 
-5951444 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa4030 
-5951462 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:2121744 arg3:5 arg4:2050 arg5:3 arg6:0 
-5951487 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1377804288 arg2:2097152 arg3:0 
-5951525 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1379901440 arg2:8192 arg3:3 arg4:2066 arg5:3 arg6:20480 
-5951578 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5951612 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f1452a81890 arg3:524288 arg4:0 
-5951645 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa4178 arg3:832 
-5951668 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_lseek 
-arg1:3 arg2:0x318 arg3:0 
-5951684 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa4030 arg3:68 
-5951701 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa4010 
-5951717 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_lseek 
-arg1:3 arg2:0x318 arg3:0 
-5951733 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa3c80 arg3:68 
-5951751 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_lseek 
-arg1:3 arg2:0x360 arg3:0 
-5951767 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa3ca0 arg3:32 
-5951784 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:1852992 arg3:1 arg4:2050 arg5:3 arg6:0 
-5951812 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1376067584 arg2:1675264 arg3:0 
-5951850 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1376067584 arg2:1359872 arg3:5 arg4:2066 arg5:3 arg6:139264 
-5951885 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1377427456 arg2:311296 arg3:1 arg4:2066 arg5:3 arg6:1499136 
-5951913 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1377742848 arg2:24576 arg3:3 arg4:2066 arg5:3 arg6:1810432 
-5951948 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:1377767424 arg2:13888 arg3:3 arg4:50 arg5:-1 arg6:0 
-5951989 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5952059 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:8192 arg3:3 arg4:34 arg5:-1 arg6:0 
-5952113 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_arch_prctl 
-arg1:4098 arg2:1375925312 
-5952273 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1377742848 arg2:16384 arg3:1 
-5952330 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1379901440 arg2:4096 arg3:1 
-5952425 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1381236736 arg2:4096 arg3:1 
-5952603 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1381662720 arg2:8192 arg3:1 
-5952693 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1383944192 arg2:4096 arg3:1 
-5952931 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1386622976 arg2:114688 arg3:1 
-5953072 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:738689024 arg2:4096 arg3:1 
-5953106 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mprotect 
-arg1:1387155456 arg2:4096 arg3:1 
-5953135 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_munmap 
-arg1:1386749952 arg2:232092 
-5953400 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:0 
-5953427 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:770981888 
-5953469 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7f14521bca80 arg3:524288 arg4:0 
-5953511 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7f14521f0900 
-5953529 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_mmap 
-arg1:0 arg2:3346512 arg3:1 arg4:2 arg5:3 arg6:0 
-5953566 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-5953674 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_getpid 
- 
-5953714 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7ffc00aa53e0 arg3:0 arg4:0 
-5953753 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:3 arg2:0x7ffc00aa49a0 
-5953782 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5953816 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x7ffc00aa46e0 arg3:524288 arg4:0 
-5953845 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:4 arg2:0x7ffc00aa4530 
-5953871 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:4 arg2:0x55b42df25940 arg3:4096 
-5953926 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:4 arg2:0x55b42df25940 arg3:4096 
-5953948 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:4 
-5954005 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x55b42df259b0 arg3:0 arg4:0 
-5954059 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x55b42df25c10 arg3:0 arg4:0 
-5954083 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x55b42df25a50 arg3:0 arg4:0 
-5954111 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x55b42df25b50 arg3:0 arg4:0 
-5954135 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x55b42df25bd0 arg3:0 arg4:0 
-5954156 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x55b42df25ad0 arg3:0 arg4:0 
-5954208 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa24c0 arg3:41 
-5954253 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_openat 
-arg1:-100 arg2:0x55b42df25dd0 arg3:577 arg4:438 
-5954400 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1c20 arg3:95 
-5956296 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:771117056 
-5965229 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:771252224 
-5970069 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:771387392 
-5970423 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_newfstat 
-arg1:4 arg2:0x7ffc00aa41a0 
-5970550 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5970602 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5970761 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5973218 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5974239 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5974364 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:771530752 
-5974400 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:771522560 
-5975293 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5976174 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5977092 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5977991 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5978645 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5979642 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5980311 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5981008 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5981668 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5982332 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5982995 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5983526 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5984138 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5984772 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5985374 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5985993 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5986644 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-5986764 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df7f51a arg3:4096 
-5986802 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5987444 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5988072 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5988737 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5989195 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5989655 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5990131 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5990602 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5991133 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5991573 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5992012 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5992445 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5992883 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5993316 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5993749 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5994196 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5994211 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7f14521f0563 arg3:1 
-5994234 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:31 
-5994668 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5995106 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5995541 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5996008 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-5996043 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5996466 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5996908 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5997393 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5997947 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5998829 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5999423 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-5999947 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6000441 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6000958 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6001448 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6001943 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6002385 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6002820 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6003254 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6003687 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6004136 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6004550 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6004965 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6005399 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6005433 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6005848 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6006265 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6006673 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6007116 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6007586 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6008127 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6008546 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6008975 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6009369 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6009765 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6010169 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6010566 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6010990 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6011376 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6011762 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6012146 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6012529 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6012542 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7f14521f0563 arg3:1 
-6012562 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:31 
-6012970 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6012998 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6013400 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6013776 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6014179 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6014561 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6014951 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6015337 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6015718 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6016107 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6016480 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6016860 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6017291 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6017986 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6018406 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6018827 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6019250 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6019677 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6020129 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6020560 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6020610 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6021048 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6021470 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6021891 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6022305 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6022678 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6023046 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6023415 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6023795 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6024202 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6024573 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6024942 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6025308 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6025673 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6026043 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6026411 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6026777 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6027151 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6027669 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6027707 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6028119 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6028480 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6028842 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6028853 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7f14521f0563 arg3:1 
-6028873 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:31 
-6029226 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6029593 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6029954 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6030311 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6030670 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6031061 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6031409 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6031761 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6032139 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6032499 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6032858 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6033230 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6033574 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6033925 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6034307 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6034339 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6034725 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6035131 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6035525 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6035900 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6036279 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6036648 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6037211 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6037683 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6038050 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6038404 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6038743 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6039091 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6039440 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6039785 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6040130 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6040484 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6040847 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6041239 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6041273 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6041662 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6042077 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6042459 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6042811 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6043162 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6043517 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6043871 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6043883 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7f14521f0563 arg3:1 
-6043904 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:31 
-6044265 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6044614 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6044959 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6045302 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6045651 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6045998 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6046362 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6046957 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6047331 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6047751 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6048142 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6048179 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6048546 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6048914 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6049282 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6049659 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6050023 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6050384 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6050768 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6051131 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6051489 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6051848 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6052211 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6052573 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6052941 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6053334 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6053708 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6054107 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6054472 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6054845 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6054881 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6055239 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6055588 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6055951 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6056304 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6056757 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6057111 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6057478 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6057848 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6058197 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6058547 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6058899 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6058914 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7f14521f0563 arg3:1 
-6058936 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:31 
-6059290 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6059644 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6060002 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6060352 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6060720 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6061075 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6061443 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6061468 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6061824 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6062182 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6062539 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6062894 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6063252 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6063610 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6063969 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6064364 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6064753 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6065137 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6065513 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6065885 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6066385 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6066751 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6067113 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6067493 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6067854 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6068237 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6068274 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6068622 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6068972 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6069324 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6069666 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6070014 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6070363 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6070726 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6071076 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6071421 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6071765 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6072111 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6072458 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6072807 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6073158 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6073490 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6073501 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7f14521f0563 arg3:1 
-6073519 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:31 
-6073860 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6074238 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6074597 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6074626 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6074969 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6075308 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6075648 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6076104 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6076508 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6076855 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6077222 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6077590 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6077955 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6078319 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6078659 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6078992 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6079324 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6079664 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6080002 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6080348 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6080700 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6081085 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6081210 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6081673 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6082053 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6082425 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6082783 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6083161 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6083527 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6083885 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6084281 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6084632 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6084982 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6085332 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6085819 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6086177 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6086526 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6086874 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6087219 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6087594 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6087953 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6087985 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6088351 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6088366 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7f14521f0563 arg3:1 
-6088388 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:31 
-6088731 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6089075 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6089416 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6089760 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6090101 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6090443 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6090815 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6091160 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6091505 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6091846 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6092193 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6092535 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6092877 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6093223 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6093571 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6093920 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6094309 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6094331 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6094675 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6095019 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6095361 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6095814 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6096227 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6096574 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6096917 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6097269 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6097678 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6098091 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6098535 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6098904 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6099275 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6099633 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6099987 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6100342 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6100713 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6101075 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6101441 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:4096 
-6101481 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x55b42df24650 arg3:4096 
-6101819 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_read 
-arg1:3 arg2:0x7ffc00aa32e0 arg3:4096 
-6103459 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:771399680 
-6103507 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1c40 arg3:49 
-6103528 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1c40 arg3:25 
-6103539 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1c40 arg3:24 
-6103549 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1c40 arg3:23 
-6103559 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:2 arg2:0x7ffc00aa1ca0 arg3:29 
-6103570 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:3 
-6103579 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_write 
-arg1:4 arg2:0x55b42df884c0 arg3:3565 
-6103604 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_close 
-arg1:4 
-6103612 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_brk 
-arg1:771395584 
-6103643 µs:   3486   oggenc    tracepoint:syscalls:sys_enter_exit_group 
-arg1:0 
+16212901 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:0 
+16212950 µs:   32509  oggenc         tracepoint:syscalls:sys_enter_arch_prctl [2] arg0:12289 arg1:328031712 
+16213006 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_access [2] arg0:0x7f6540da3550 arg1:4 
+16213045 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540da09fa arg2:524288 arg3:0 
+16213077 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d4fd0 
+16213099 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:235491 arg2:1 arg3:2 arg4:3 
+16213122 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16213171 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540daac70 arg2:524288 arg3:0 
+16213203 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d5178 arg2:832 
+16213225 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d5020 
+16213242 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:8192 arg2:3 arg3:34 arg4:-1 
+16213271 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:2785360 arg2:5 arg3:2050 arg4:3 
+16213295 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1085431808 arg1:2093056 arg2:0 
+16213326 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1087524864 arg1:118784 arg2:3 arg3:2066 arg4:3 
+16213386 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16213421 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540d424d0 arg2:524288 arg3:0 
+16213446 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d5158 arg2:832 
+16213465 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d5000 
+16213482 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:2273296 arg2:5 arg3:2050 arg4:3 
+16213503 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1082748928 arg1:2097152 arg2:0 
+16213529 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1084846080 arg1:8192 arg2:3 arg3:2066 arg4:3 
+16213577 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16213620 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540d429c0 arg2:524288 arg3:0 
+16213643 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d5138 arg2:832 
+16213663 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d4fe0 
+16213680 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:426016 arg2:1 arg3:2050 arg4:3 
+16213702 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1082183680 arg1:344064 arg2:5 arg3:2066 arg4:3 
+16213732 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1082527744 arg1:36864 arg2:1 arg3:2066 arg4:3 
+16213761 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1082564608 arg1:12288 arg2:3 arg3:2066 arg4:3 
+16213804 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16213840 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540d42eb0 arg2:524288 arg3:0 
+16213867 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d5118 arg2:832 
+16213886 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d4fc0 
+16213909 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:1331224 arg2:1 arg3:2050 arg4:3 
+16213934 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1080872960 arg1:638976 arg2:5 arg3:2066 arg4:3 
+16213964 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1081511936 arg1:626688 arg2:1 arg3:2066 arg4:3 
+16213988 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1082138624 arg1:8192 arg2:3 arg3:2066 arg4:3 
+16214047 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16214109 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540d433a0 arg2:524288 arg3:0 
+16214151 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d50f8 arg2:832 
+16214183 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d4fa0 
+16214207 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:2121744 arg2:5 arg3:2050 arg4:3 
+16214245 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1078706176 arg1:2097152 arg2:0 
+16214289 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1080803328 arg1:8192 arg2:3 arg3:2066 arg4:3 
+16214377 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16214418 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540d43890 arg2:524288 arg3:0 
+16214445 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d50d8 arg2:832 
+16214464 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:64 arg2:0 
+16214480 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d4cd0 arg2:784 
+16214495 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:848 arg2:0 
+16214510 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d4ca0 arg2:32 
+16214525 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:880 arg2:0 
+16214540 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d4c50 arg2:68 
+16214556 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d4f80 
+16214573 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:64 arg2:0 
+16214588 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d4bd0 arg2:784 
+16214604 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:848 arg2:0 
+16214618 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d48b0 arg2:32 
+16214634 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_lseek [3] arg0:3 arg1:880 arg2:0 
+16214648 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d4890 arg2:68 
+16214665 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:1844408 arg2:1 arg3:2050 arg4:3 
+16214686 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1076989952 arg1:1654784 arg2:0 
+16214715 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1076989952 arg1:1351680 arg2:5 arg3:2066 arg4:3 
+16214744 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1078341632 arg1:299008 arg2:1 arg3:2066 arg4:3 
+16214770 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1078644736 arg1:24576 arg2:3 arg3:2066 arg4:3 
+16214803 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:1078669312 arg1:13496 arg2:3 arg3:50 arg4:-1 
+16214844 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16214946 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:8192 arg2:3 arg3:34 arg4:-1 
+16215043 µs:   32509  oggenc         tracepoint:syscalls:sys_enter_arch_prctl [2] arg0:4098 arg1:1076835392 
+16215300 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1078644736 arg1:12288 arg2:1 
+16215402 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1080803328 arg1:4096 arg2:1 
+16215506 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1082138624 arg1:4096 arg2:1 
+16215816 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1082564608 arg1:8192 arg2:1 
+16215957 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1084846080 arg1:4096 arg2:1 
+16216272 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1087524864 arg1:114688 arg2:1 
+16216427 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:-560689152 arg1:4096 arg2:1 
+16216461 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_mprotect [3] arg0:1088061440 arg1:4096 arg2:1 
+16216487 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_munmap [2] arg0:1087651840 arg1:235491 
+16216780 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:0 
+16216805 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536993792 
+16216848 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7f6540482290 arg2:524288 arg3:0 
+16216892 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7f65404b25e0 
+16216914 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_mmap [5] arg0:0 arg1:3346512 arg2:1 arg3:2 arg4:3 
+16216955 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16217096 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_getpid [0] 
+16217133 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7ffc138d63df arg2:0 arg3:0 
+16217163 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:3 arg1:0x7ffc138d5910 
+16217188 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16217560 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x7ffc138d5640 arg2:524288 arg3:0 
+16217613 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:4 arg1:0x7ffc138d5490 
+16217649 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a2dffc3940 arg2:4096 
+16217742 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:4 arg1:0x55a2dffc3940 arg2:4096 
+16217778 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:4 
+16217852 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a2dffc39b0 arg2:0 arg3:0 
+16217889 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a2dffc3c10 arg2:0 arg3:0 
+16217914 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a2dffc3a50 arg2:0 arg3:0 
+16217966 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a2dffc3b50 arg2:0 arg3:0 
+16217988 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a2dffc3bd0 arg2:0 arg3:0 
+16218008 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a2dffc3ad0 arg2:0 arg3:0 
+16218069 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d3440 arg2:41 
+16218118 µs:   32509  oggenc             tracepoint:syscalls:sys_enter_openat [4] arg0:-100 arg1:0x55a2dffc3dd0 arg2:577 arg3:438 
+16218263 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2ba0 arg2:95 
+16221035 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536858624 
+16229081 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536723456 
+16233619 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536588288 
+16233962 µs:   32509  oggenc           tracepoint:syscalls:sys_enter_newfstat [2] arg0:4 arg1:0x7ffc138d5110 
+16234089 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16234228 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16234337 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16236764 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16237751 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16237834 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536444928 
+16237868 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536453120 
+16238734 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16239680 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16240555 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16241426 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16242099 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16242781 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16243441 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16244182 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16244869 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16245625 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16246418 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16246947 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16247471 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16248020 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16248624 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16249202 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16249757 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16249812 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e001d51a arg2:4096 
+16249848 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16250427 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16250974 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16251486 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16251929 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16252375 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16252833 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16253359 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16253797 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16254233 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16254673 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16255109 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16255546 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16255993 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16256434 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16256807 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16256820 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7f65404b1563 arg2:1 
+16256840 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:31 
+16257213 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16257590 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16257965 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16258357 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16258377 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16258769 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16259161 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16259536 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16259915 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16260297 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16260676 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16261057 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16261458 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16261882 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16262305 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16262690 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16263044 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16263393 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16263742 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16264090 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16264440 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16264786 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16265180 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16265592 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16265617 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16266029 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16266381 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16266724 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16267071 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16267415 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16267764 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16268115 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16268465 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16268808 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16269162 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16269513 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16269857 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16270208 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16270555 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16270904 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16271252 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16271599 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16271611 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7f65404b1563 arg2:1 
+16271626 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:31 
+16271982 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16272007 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16272375 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16272736 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16273086 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16273431 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16273780 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16274127 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16274472 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16274817 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16275162 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16275507 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16275861 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16276221 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16276565 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16276919 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16277314 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16277665 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16278027 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16278442 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16278528 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16278952 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16279320 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16279693 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16280051 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16280405 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16280751 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16281098 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16281460 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16281842 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16282200 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16282562 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16282943 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16283336 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16283702 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16284037 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16284372 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16284710 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16285064 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16285091 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16285451 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16285794 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16286134 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16286145 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7f65404b1563 arg2:1 
+16286161 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:31 
+16286491 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16286829 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16287177 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16287511 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16287846 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16288187 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16288524 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16288912 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16289260 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16289596 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16289931 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16290266 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16290597 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16290937 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16291288 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16291305 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16291655 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16291995 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16292332 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16292678 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16293015 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16293346 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16293692 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16294031 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16294364 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16294708 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16295079 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16295490 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16295846 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16296186 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16296524 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16296858 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16297194 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16297547 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16297574 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16297923 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16298289 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16298665 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16299004 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16299348 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16299684 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16300069 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16300080 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7f65404b1563 arg2:1 
+16300101 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:31 
+16300434 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16300771 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16301107 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16301444 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16301787 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16302123 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16302459 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16302794 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16303124 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16303460 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16303809 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16303835 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16304192 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16304529 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16304862 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16305199 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16305534 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16305881 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16306219 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16306554 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16306889 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16307226 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16307567 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16307903 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16308239 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16308576 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16308923 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16309269 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16309608 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16309960 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16309977 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16310328 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16310664 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16311039 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16311395 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16311786 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16312178 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16312533 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16312894 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16313236 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16313579 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16313914 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16313925 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7f65404b1563 arg2:1 
+16313941 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:31 
+16314280 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16314616 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16314976 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16315354 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16315699 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16316045 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16316396 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16316424 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16316762 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16317103 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16317441 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16317778 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16318118 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16318455 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16318796 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16319138 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16319481 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16319816 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16320149 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16320483 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16320820 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16321159 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16321498 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16321832 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16322200 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16322566 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16322582 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16322914 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16323252 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16323595 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16323916 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16324246 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16324572 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16324896 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16325222 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16325546 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16325875 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16326200 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16326527 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16326860 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16327187 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16327513 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16327523 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7f65404b1563 arg2:1 
+16327541 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:31 
+16327875 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16328235 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16328645 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16328683 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16329014 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16329369 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16329707 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16330048 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16330384 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16330721 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16331055 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16331407 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16331770 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16332114 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16332472 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16332808 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16333189 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16333532 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16333872 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16334211 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16334558 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16334901 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16334926 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16335254 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16335607 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16335949 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16336286 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16336631 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16336963 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16337287 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16337615 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16337946 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16338277 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16338606 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16338939 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16339279 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16339608 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16339936 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16340265 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16340594 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16340933 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16340947 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16341278 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16341288 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7f65404b1563 arg2:1 
+16341304 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:31 
+16341628 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16341954 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16342279 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16342611 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16342938 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16343263 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16343601 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16343961 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16344453 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16345005 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16345584 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16346073 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16346530 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16346873 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16347197 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16347552 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16347901 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16347932 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16348271 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16348647 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16348983 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16349327 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16349658 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16349985 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16350312 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16350642 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16350964 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16351292 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16351633 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16351953 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16352278 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16352639 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16352969 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16353301 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16353630 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16353964 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16354308 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:4096 
+16354328 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x55a2dffc2650 arg2:4096 
+16354644 µs:   32509  oggenc               tracepoint:syscalls:sys_enter_read [3] arg0:3 arg1:0x7ffc138d4250 arg2:4096 
+16356161 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536576000 
+16356195 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2bc0 arg2:49 
+16356210 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2bc0 arg2:25 
+16356217 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2bc0 arg2:24 
+16356223 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2bc0 arg2:23 
+16356228 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:2 arg1:0x7ffc138d2c20 arg2:29 
+16356235 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:3 
+16356242 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_write [3] arg0:4 arg1:0x55a2e00264c0 arg2:3565 
+16356262 µs:   32509  oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:4 
+16356269 µs:   32509  oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-536580096 
+16356297 µs:   32509  oggenc         tracepoint:syscalls:sys_enter_exit_group [1] arg0:0 
 
 
-@start: 20787687580246
+@start: 23244219270883
 
 
