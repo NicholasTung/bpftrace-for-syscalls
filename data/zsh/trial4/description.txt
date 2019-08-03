@@ -1,0 +1,2 @@
+Did git status, commit, push, cd, using alias, echo into description
+unsure how accurate it is, because the computer locked up when i closed the tracer
