@@ -8,7 +8,7 @@
 
 BEGIN
 {
-    printf("Tracing syscalls for something. Ctrl-C to stop.\n");
+    printf("Tracing syscalls for %s. Ctrl-C to stop.\n", str($1));
     printf("%-9s %-6s %s \n", "TIME", "PID", "EVENT");
     @start = nsecs;
 }
