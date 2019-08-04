@@ -1,0 +1,6 @@
+opened gimp to xkcd comic (jpg)
+open export menu
+cancel export menu
+open export menu again
+export comic as a jpeg with 80 quality
+close gimp

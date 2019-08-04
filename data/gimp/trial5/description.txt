@@ -1,0 +1,5 @@
+opened gimp to xkcd comic (png)
+use default paintbrush tool to scribble on comic
+open the "save as" menu by accident
+export as png under new name
+close gimp without changing original image

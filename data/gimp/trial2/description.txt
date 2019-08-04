@@ -1,0 +1,8 @@
+opened gimp
+opened an xkcd comic (jpg) in gimp
+scaled it up to a width of 1800px
+attempted to save as
+but it wouldnt allow saving as a png, only as an xcf
+so it was then exported as an png under a new name
+closed gimp without saving changes to original image
+

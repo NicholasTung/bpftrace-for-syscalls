@@ -1,0 +1,5 @@
+opened gimp to xkcd comig (png)
+open crop tool using keybinding
+crop comic
+export as a new png
+close gimp without saving changes
