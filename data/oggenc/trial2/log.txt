@@ -1,6 +1,3 @@
-Attaching 317 probes...
-Tracing syscalls for something. Ctrl-C to stop.
-TIME      PID    EVENT 
 15787113 µs:   9231   oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:0 
 15787146 µs:   9231   oggenc         tracepoint:syscalls:sys_enter_arch_prctl [2] arg0:12289 arg1:-1126513856 
 15787187 µs:   9231   oggenc             tracepoint:syscalls:sys_enter_access [2] arg0:0x7fa7df816550 arg1:4 
@@ -220,8 +217,5 @@ TIME      PID    EVENT
 15868672 µs:   9231   oggenc              tracepoint:syscalls:sys_enter_close [1] arg0:4 
 15868682 µs:   9231   oggenc                tracepoint:syscalls:sys_enter_brk [1] arg0:-856961024 
 15868712 µs:   9231   oggenc         tracepoint:syscalls:sys_enter_exit_group [1] arg0:0 
-
-
-@start: 28612445424999
 
 
