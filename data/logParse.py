@@ -2,42 +2,70 @@
 # this may very well be some of the worst code ive ever written in my life
 # but if it works, it works
 
+# Usage: python logParse.py [program name] [trial number]
+
 import pandas as pd
 import sys
 import numpy as np
+import re
 
 path = "{}/trial{}/".format(sys.argv[1], sys.argv[2])
 
 with open("{}log.txt".format(path), 'r+') as f:
-    lines = f.readlines()
-    f.seek(0)
-    f.truncate()
-    f.writelines(lines[3:-3])
-    lines = lines[3:-3]
 
     df = pd.DataFrame()
     timestamp, pid, process, syscall = list(), list(), list(), list()
     args = [list(), list(), list(), list(), list(), list()]
 
-    for line in lines:
+    lineNum = 0
+    errored = False
+    for line in f:
         if line.strip() == "":
             break
 
-        l = line.split(maxsplit=6)
+        lineNum += 1
 
-        timestamp.append(l[0])
-        pid.append(l[2])
-        process.append(l[3])
-        syscall.append(l[4].split("_", maxsplit=3)[-1])
+        try:
+            tokens = line.split()
+            lineArgs = list()
 
-        a = [s.split(":")[-1] for s in l[-1].split()]
-        numArgs = int(l[5][1])
+            for token in reversed(tokens):
+                if re.fullmatch(r"arg\d:.*", token):
+                    lineArgs.insert(0, token.split(":")[-1])
+                elif re.fullmatch(r"\[\d\]", token):
+                    numArgs = int(token[1])
+                elif re.fullmatch(r"tracepoint:syscalls:sys_enter.*", token):
+                    syscall.append(token.split("_", maxsplit=2)[-1])
+                elif re.fullmatch(r"\d+", token):
+                    pid.append(token)
+                elif re.fullmatch(r"µs:", token):
+                    timestamp.append(tokens[tokens.index(token) - 1])
+                    break
+                else:
+                    process.append(token)
 
-        for i in range(numArgs):
-            args[i].append(a[i])
+            if len(timestamp) < lineNum:
+                timestamp.append(np.NaN)
+            if len(pid) < lineNum:
+                pid.append(np.NaN)
+            if len(process) < lineNum:
+                process.append(np.NaN)
+            if len(syscall) < lineNum:
+                syscall.append(np.NaN)
 
-        for i in range(numArgs, 6):
-            args[i].append(np.nan)
+            for i in range(numArgs):
+                args[i].append(lineArgs[i])
+
+            for i in range(numArgs, 6):
+                args[i].append(np.nan)
+
+        except:
+            print("{}: {}".format(lineNum, line))
+            print(sys.exc_info()[0])
+            errored = True
+
+    if errored:
+        exit()
 
     df["timestamp"] = timestamp
     df["pid"] = pid
