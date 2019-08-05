@@ -14,7 +14,7 @@ path = "{}/trial{}/".format(sys.argv[1], sys.argv[2])
 with open("{}log.txt".format(path), 'r+') as f:
 
     df = pd.DataFrame()
-    timestamp, pid, process, syscall = list(), list(), list(), list()
+    timestamp, pid, process, syscall, numArgs = list(), list(), list(), list(), list()
     args = [list(), list(), list(), list(), list(), list()]
 
     lineNum = 0
@@ -33,7 +33,8 @@ with open("{}log.txt".format(path), 'r+') as f:
                 if re.fullmatch(r"arg\d:.*", token):
                     lineArgs.insert(0, token.split(":")[-1])
                 elif re.fullmatch(r"\[\d\]", token):
-                    numArgs = int(token[1])
+                    argNum = int(token[1])
+                    numArgs.append(argNum)
                 elif re.fullmatch(r"tracepoint:syscalls:sys_enter.*", token):
                     syscall.append(token.split("_", maxsplit=2)[-1])
                 elif re.fullmatch(r"\d+", token):
@@ -52,16 +53,18 @@ with open("{}log.txt".format(path), 'r+') as f:
                 process.append(np.NaN)
             if len(syscall) < lineNum:
                 syscall.append(np.NaN)
+            if len(numArgs) < lineNum:
+                numArgs.append(np.NaN)
 
-            for i in range(numArgs):
+            for i in range(argNum):
                 args[i].append(lineArgs[i])
 
-            for i in range(numArgs, 6):
+            for i in range(argNum, 6):
                 args[i].append(np.nan)
 
         except:
             print("{}: {}".format(lineNum, line))
-            print(sys.exc_info()[0])
+            print(sys.exc_info())
             errored = True
 
     if errored:
@@ -71,6 +74,7 @@ with open("{}log.txt".format(path), 'r+') as f:
     df["pid"] = pid
     df["process"] = process
     df["syscall"] = syscall
+    df["numArgs"] = numArgs
 
     for i in range(len(args)):
         df["arg{}".format(i)] = pd.Series(args[i])
