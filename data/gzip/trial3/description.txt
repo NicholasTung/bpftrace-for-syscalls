@@ -1,0 +1,1 @@
+zipped Manifesto.pdf in ../text
