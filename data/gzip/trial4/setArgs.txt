@@ -1,0 +1,142 @@
+Process: gzip
+Number of unique syscalls: 28
+
+brk():
+# of calls: 4
+arg0: ('0', '-1119440896', '-1119305728')
+
+arch_prctl():
+# of calls: 2
+arg0: ('12289', '4098')
+arg1: ('-2041093664', '-435254400')
+
+access():
+# of calls: 5
+arg0: ('0x7f84e63d4550', '0x558cbd47f940')
+arg1: ('4', '1')
+
+openat():
+# of calls: 10
+arg0: ('-100',)
+arg1: ('0x7f84e63d19fa', '0x7f84e63dbc70', '0x7f84e63734d0', '0x7f84e63739c0', '0x7f84e6373eb0', '0x558cbd0e81bf', '0x7f84e62e7290', '0x7f84e62e35b8', '0x7ffe86575e80', '0x558cbd47aae0')
+arg2: ('524288', '2050', '0')
+arg3: ('0',)
+
+newfstat():
+# of calls: 8
+arg0: ('3', '255')
+arg1: ('0x7ffe865753d0', '0x7ffe86575420', '0x7ffe86575400', '0x7ffe865753e0', '0x7ffe865753c0', '0x7f84e63175e0', '0x7ffe86575d10', '0x7ffe86575f90')
+
+mmap():
+# of calls: 22
+arg0: ('(nil)', '0x7f84e6337000', '0x7f84e635f000', '0x7f84e6369000', '0x7f84e6372000', '0x7f84e631d000', '0x7f84e631e000', '0x7f84e631f000', '0x7f84e617e000', '0x7f84e62c8000', '0x7f84e6312000', '0x7f84e6318000', '0x7f84e6101000', '0x7f84e613c000', '0x7f84e6153000')
+arg1: ('235491', '8192', '334344', '163840', '40960', '36864', '2568', '16528', '4096', '1844408', '1351680', '299008', '24576', '13496', '453880', '241664', '94208', '3346512')
+arg2: ('1', '3', '5')
+arg3: ('2', '34', '2050', '2066', '50')
+arg4: ('3', '-1')
+
+close():
+# of calls: 9
+arg0: ('3',)
+
+read():
+# of calls: 27
+arg0: ('3', '255')
+arg1: ('0x7ffe86575578', '0x7ffe86575558', '0x7ffe86575538', '0x7ffe86575130', '0x7ffe86575100', '0x7ffe865750b0', '0x7ffe86575030', '0x7ffe86574d10', '0x7ffe86574cf0', '0x7ffe86575518', '0x558cbd44b740', '0x7ffe86576140', '0x558cbd47abf0')
+arg2: ('832', '784', '32', '68', '4096', '80', '2346')
+
+lseek():
+# of calls: 9
+arg0: ('3', '255')
+arg1: ('64', '848', '880', '0')
+arg2: ('0', '1')
+
+mprotect():
+# of calls: 7
+arg0: ('-434642944', '-432988160', '-434819072', '-432934912', '-432631808', '-1122942976', '-432173056')
+arg1: ('1654784', '12288', '20480', '4096')
+arg2: ('0', '1')
+
+munmap():
+# of calls: 1
+arg0: ('-432582656',)
+arg1: ('235491',)
+
+getuid():
+# of calls: 5
+
+getgid():
+# of calls: 5
+
+geteuid():
+# of calls: 5
+
+getegid():
+# of calls: 5
+
+rt_sigprocmask():
+# of calls: 3
+arg0: ('0',)
+arg1: ('(nil)',)
+arg2: ('0x558cbd122cc8', '0x558cbd127740', '0x558cbd127808')
+arg3: ('8',)
+
+ioctl():
+# of calls: 3
+arg0: ('-1', '2', '3')
+arg1: ('21519', '21505')
+arg2: ('-2041094060', '-2041094364', '-2041094176')
+
+sysinfo():
+# of calls: 1
+arg0: ('0x7ffe86575dc0',)
+
+rt_sigaction():
+# of calls: 17
+arg0: ('17', '2', '3', '20', '21', '22')
+arg1: ('0x7ffe86575ca0', '0x7ffe86575c80', '0x7ffe86575c90', '0x7ffe86575b20')
+arg2: ('0x7ffe86575d40', '0x7ffe86575d20', '0x7ffe86575d30', '0x7ffe86575bc0')
+arg3: ('8',)
+
+newuname():
+# of calls: 1
+arg0: ('0x7ffe86575da0',)
+
+newstat():
+# of calls: 20
+arg0: ('0x558cbd474610', '0x558cbd0e91ab', '0x558cbd475de0', '0x558cbd472cb0', '0x558cbd47aae0', '0x558cbd47d7c0', '0x558cbd47f940')
+arg1: ('0x7ffe86575d50', '0x7ffe86575de0', '0x7ffe86575d90', '0x7ffe86575df0', '0x7ffe86575fd0', '0x7ffe86575cf0', '0x7ffe86575be0', '0x7ffe86575b00', '0x7ffe86575c10', '0x7ffe86575b30')
+
+getpid():
+# of calls: 2
+
+getppid():
+# of calls: 1
+
+getpgrp():
+# of calls: 1
+
+prlimit64():
+# of calls: 2
+arg0: ('0',)
+arg1: ('6', '7')
+arg2: ('(nil)',)
+arg3: ('0x7ffe86575e90', '0x7ffe86576010')
+
+fcntl():
+# of calls: 3
+arg0: ('255',)
+arg1: ('1', '2', '3')
+arg2: ('-2041094076', '1', '0')
+
+dup2():
+# of calls: 1
+arg0: ('3',)
+arg1: ('255',)
+
+execve():
+# of calls: 1
+arg0: ('0x558cbd47d770',)
+arg1: ('0x558cbd47ea30',)
+arg2: ('0x558cbd479140',)
+

@@ -1,0 +1,74 @@
+Process: readmeme
+Number of unique syscalls: 13
+
+brk():
+# of calls: 3
+arg0: ('0', '-1717911552')
+
+arch_prctl():
+# of calls: 2
+arg0: ('12289', '4098')
+arg1: ('-1743994992', '59016448')
+
+access():
+# of calls: 1
+arg0: ('0x7f58038a8550',)
+arg1: ('4',)
+
+openat():
+# of calls: 3
+arg0: ('-100',)
+arg1: ('0x7f58038a59fa', '0x7f58038afc70', '0x7ffd980cbf50')
+arg2: ('524288', '0')
+arg3: ('0',)
+
+newfstat():
+# of calls: 5
+arg0: ('3', '1', '0')
+arg1: ('0x7ffd980cb180', '0x7ffd980cb1d0', '0x7ffd980cbdd0', '0x7ffd980cbdf0', '0x7ffd980cbe10')
+
+mmap():
+# of calls: 7
+arg0: ('(nil)', '0x7f58036a9000', '0x7f58037f3000', '0x7f580383d000', '0x7f5803843000')
+arg1: ('235491', '8192', '1844408', '1351680', '299008', '24576', '13496')
+arg2: ('1', '3', '5')
+arg3: ('2', '34', '2050', '2066', '50')
+arg4: ('3', '-1')
+
+close():
+# of calls: 3
+arg0: ('3',)
+
+read():
+# of calls: 10
+arg0: ('3', '0')
+arg1: ('0x7ffd980cb328', '0x7ffd980caf20', '0x7ffd980caef0', '0x7ffd980caea0', '0x7ffd980cae20', '0x7ffd980cab00', '0x7ffd980caae0', '0x56079998b670', '0x56079998bcb0')
+arg2: ('832', '784', '32', '68', '1024', '4096')
+
+lseek():
+# of calls: 6
+arg0: ('3',)
+arg1: ('64', '848', '880')
+arg2: ('0',)
+
+mprotect():
+# of calls: 4
+arg0: ('57315328', '58970112', '-1733197824', '59428864')
+arg1: ('1654784', '12288', '4096')
+arg2: ('0', '1')
+
+munmap():
+# of calls: 1
+arg0: ('59019264',)
+arg1: ('235491',)
+
+write():
+# of calls: 3
+arg0: ('1',)
+arg1: ('0x56079998b260',)
+arg2: ('37', '8')
+
+exit_group():
+# of calls: 1
+arg0: ('0',)
+

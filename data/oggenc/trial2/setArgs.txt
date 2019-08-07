@@ -1,0 +1,77 @@
+Process: oggenc
+Number of unique syscalls: 14
+
+brk():
+# of calls: 10
+arg0: ('0', '-857374720', '-857239552', '-857104384', '-856969216', '-856825856', '-856834048', '-856956928', '-856961024')
+
+arch_prctl():
+# of calls: 2
+arg0: ('12289', '4098')
+arg1: ('-1126513856', '-556374976')
+
+access():
+# of calls: 1
+arg0: ('0x7fa7df816550',)
+arg1: ('4',)
+
+openat():
+# of calls: 17
+arg0: ('-100',)
+arg1: ('0x7fa7df8139fa', '0x7fa7df81dc70', '0x7fa7df7b54d0', '0x7fa7df7b59c0', '0x7fa7df7b5eb0', '0x7fa7df7b63a0', '0x7fa7df7b6890', '0x7fa7deef5290', '0x7ffdbcdad39c', '0x7ffdbcdabba0', '0x5558cce399b0', '0x5558cce39c10', '0x5558cce39a50', '0x5558cce39b50', '0x5558cce39bd0', '0x5558cce39ad0', '0x5558cce39dd0')
+arg2: ('524288', '0', '577')
+arg3: ('0', '438')
+
+newfstat():
+# of calls: 11
+arg0: ('3', '4')
+arg1: ('0x7ffdbcdab530', '0x7ffdbcdab580', '0x7ffdbcdab560', '0x7ffdbcdab540', '0x7ffdbcdab520', '0x7ffdbcdab500', '0x7ffdbcdab4e0', '0x7fa7def255e0', '0x7ffdbcdabe70', '0x7ffdbcdab9f0', '0x7ffdbcdab670')
+
+mmap():
+# of calls: 23
+arg0: ('(nil)', '0x7fa7df798000', '0x7fa7df50a000', '0x7fa7df280000', '0x7fa7df2d4000', '0x7fa7df2dd000', '0x7fa7df140000', '0x7fa7df1dc000', '0x7fa7df275000', '0x7fa7df12f000', '0x7fa7ded8c000', '0x7fa7deed6000', '0x7fa7def20000', '0x7fa7def26000')
+arg1: ('235491', '8192', '2785360', '118784', '2273296', '426016', '344064', '36864', '12288', '1331224', '638976', '626688', '2121744', '1844408', '1351680', '299008', '24576', '13496', '3346512')
+arg2: ('1', '3', '5')
+arg3: ('2', '34', '2050', '2066', '50')
+arg4: ('3', '-1')
+
+close():
+# of calls: 11
+arg0: ('3', '4')
+
+read():
+# of calls: 102
+arg0: ('3', '4')
+arg1: ('0x7ffdbcdab6d8', '0x7ffdbcdab6b8', '0x7ffdbcdab698', '0x7ffdbcdab678', '0x7ffdbcdab658', '0x7ffdbcdab638', '0x7ffdbcdab230', '0x7ffdbcdab200', '0x7ffdbcdab1b0', '0x7ffdbcdab130', '0x7ffdbcdaae10', '0x7ffdbcdaadf0', '0x5558cce38650', '0x5558cce39940', '0x7ffdbcdaa7b0')
+arg2: ('832', '784', '32', '68', '4096')
+
+mprotect():
+# of calls: 12
+arg0: ('-547778560', '-550461440', '-554504192', '-556220416', '-554565632', '-552407040', '-551071744', '-550645760', '-548364288', '-545685504', '-879562752', '-545148928')
+arg1: ('2093056', '2097152', '1654784', '12288', '4096', '8192', '114688')
+arg2: ('0', '1')
+
+lseek():
+# of calls: 6
+arg0: ('3',)
+arg1: ('64', '848', '880')
+arg2: ('0',)
+
+munmap():
+# of calls: 1
+arg0: ('-545558528',)
+arg1: ('235491',)
+
+getpid():
+# of calls: 1
+
+write():
+# of calls: 21
+arg0: ('2', '4')
+arg1: ('0x7ffdbcda99a0', '0x7ffdbcda9100', '0x5558cce9c4c0', '0x7fa7def24563', '0x7ffdbcda9180', '0x7ffdbcda9120')
+arg2: ('41', '107', '4096', '1', '31', '55', '25', '24', '23', '30', '2846')
+
+exit_group():
+# of calls: 1
+arg0: ('0',)
+

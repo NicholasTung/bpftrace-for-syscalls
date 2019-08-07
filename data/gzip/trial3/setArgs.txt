@@ -1,0 +1,112 @@
+Process: gzip
+Number of unique syscalls: 19
+
+brk():
+# of calls: 3
+arg0: ('0', '-148262912')
+
+arch_prctl():
+# of calls: 2
+arg0: ('12289', '4098')
+arg1: ('-2027213936', '1403323776')
+
+access():
+# of calls: 1
+arg0: ('0x7fb653ab0550',)
+arg1: ('4',)
+
+openat():
+# of calls: 5
+arg0: ('-100', '3')
+arg1: ('0x7fb653aad9fa', '0x7fb653ab7c70', '0x55a3f5fb0560', '0x55a3f5fb4340', '0x55a3f5fe8f40')
+arg2: ('524288', '65536', '133376', '193')
+arg3: ('0', '384')
+
+newfstat():
+# of calls: 3
+arg0: ('3', '4')
+arg1: ('0x7fff872b1d80', '0x7fff872b1dd0', '0x55a3f5fb04c0')
+
+mmap():
+# of calls: 7
+arg0: ('(nil)', '0x7fb6538b1000', '0x7fb6539fb000', '0x7fb653a45000', '0x7fb653a4b000')
+arg1: ('235491', '8192', '1844408', '1351680', '299008', '24576', '13496')
+arg2: ('1', '3', '5')
+arg3: ('2', '34', '2050', '2066', '50')
+arg4: ('3', '-1')
+
+close():
+# of calls: 4
+arg0: ('3', '4', '5')
+
+read():
+# of calls: 24
+arg0: ('3', '4')
+arg1: ('0x7fff872b1f28', '0x7fff872b1b20', '0x7fff872b1af0', '0x7fff872b1aa0', '0x7fff872b1a20', '0x7fff872b1700', '0x7fff872b16e0', '0x55a3f5fe9340', '0x55a3f5ff1340', '0x55a3f5ff7b3a')
+arg2: ('832', '784', '32', '68', '65536', '32768', '6150')
+
+lseek():
+# of calls: 6
+arg0: ('3',)
+arg1: ('64', '848', '880')
+arg2: ('0',)
+
+mprotect():
+# of calls: 4
+arg0: ('1401622528', '1403277312', '-168103936', '1403736064')
+arg1: ('1654784', '12288', '4096')
+arg2: ('0', '1')
+
+munmap():
+# of calls: 1
+arg0: ('1403326464',)
+arg1: ('235491',)
+
+rt_sigaction():
+# of calls: 12
+arg0: ('2', '1', '13', '15', '24', '25')
+arg1: ('(nil)', '0x7fff872b2940')
+arg2: ('0x7fff872b29e0', '(nil)')
+arg3: ('8',)
+
+rt_sigprocmask():
+# of calls: 4
+arg0: ('0', '2')
+arg1: ('0x55a3f5fb0da0', '0x7fff872b25c0')
+arg2: ('0x7fff872b25c0', '(nil)')
+arg3: ('8',)
+
+write():
+# of calls: 30
+arg0: ('5',)
+arg1: ('0x55a3f5fe4740',)
+arg2: ('16384', '11823')
+
+utimensat():
+# of calls: 1
+arg0: ('5',)
+arg1: ('(nil)',)
+arg2: ('0x7fff872b2460',)
+arg3: ('0',)
+
+fchown():
+# of calls: 2
+arg0: ('5',)
+arg1: ('-1', '1000')
+arg2: ('998', '-1')
+
+fchmod():
+# of calls: 1
+arg0: ('5',)
+arg1: ('420',)
+
+unlinkat():
+# of calls: 1
+arg0: ('3',)
+arg1: ('0x55a3f5fb4340',)
+arg2: ('0',)
+
+exit_group():
+# of calls: 1
+arg0: ('0',)
+
